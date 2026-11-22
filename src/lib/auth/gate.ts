@@ -1,5 +1,5 @@
 export type LoginMethods = { google: boolean; emailPassword: boolean };
-export type GateView = 'loading' | 'login' | 'not-member' | 'app';
+export type GateView = 'loading' | 'login' | 'not-member' | 'error' | 'app';
 
 export const NOT_ON_TEAM_MESSAGE = 'This Google account is not on the team.';
 export const GENERIC_AUTH_MESSAGE = 'Sign-in failed. Please try again.';
@@ -10,12 +10,18 @@ export function loginMethods(isDevServer: boolean): LoginMethods {
 }
 
 /**
- * Signed in but an empty catalog means RLS hides everything from this account,
- * i.e. it is not on the team (e.g. the signup hook was not enabled).
+ * Signed in but a successfully fetched, empty catalog means RLS hides everything from this
+ * account, i.e. it is not on the team. A failed fetch is NOT that: it is a retryable error.
  */
-export function resolveGate(s: { loading: boolean; signedIn: boolean; hasCatalogAccess: boolean }): GateView {
+export function resolveGate(s: {
+  loading: boolean;
+  signedIn: boolean;
+  hasCatalogAccess: boolean;
+  catalogError?: boolean;
+}): GateView {
   if (s.loading) return 'loading';
   if (!s.signedIn) return 'login';
+  if (s.catalogError) return 'error';
   return s.hasCatalogAccess ? 'app' : 'not-member';
 }
 

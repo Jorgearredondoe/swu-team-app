@@ -23,6 +23,12 @@ describe('resolveGate', () => {
   it('blocks a signed-in account that RLS shows an empty catalog (not on the team)', () => {
     expect(resolveGate({ loading: false, signedIn: true, hasCatalogAccess: false })).toBe('not-member');
   });
+  it('shows a retryable error, not "not on the team", when the catalog fetch failed', () => {
+    expect(resolveGate({ loading: false, signedIn: true, hasCatalogAccess: false, catalogError: true })).toBe('error');
+  });
+  it('still sends signed-out visitors to login even after a catalog error', () => {
+    expect(resolveGate({ loading: false, signedIn: false, hasCatalogAccess: false, catalogError: true })).toBe('login');
+  });
 });
 
 describe('authErrorFromUrl', () => {

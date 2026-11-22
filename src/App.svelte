@@ -5,6 +5,8 @@
   import { fetchTeamRows } from './lib/data/teamRepo.ts';
   import { createSessionStore } from './lib/state/session.svelte.ts';
   import { createStockStore, type StockStore } from './lib/state/stock.svelte.ts';
+  import { createUserDataLoader, type UserData } from './lib/state/userData.ts';
+  import { untrack } from 'svelte';
   import { isConfigured, supabase } from './lib/supabase.ts';
   import type { Card, TeamRow } from './lib/types.ts';
   import LoginPage from './pages/LoginPage.svelte';
@@ -18,39 +20,37 @@
   const session = supabase ? createSessionStore(supabase.auth, location.origin) : null;
 
   let route = $state(location.hash === '#/team' ? '#/team' : '#/stock');
-  let cards = $state<Card[]>([]);
-  let catalogReady = $state(false);
-  let stock = $state<StockStore | null>(null);
+  let data = $state.raw<UserData<StockStore>>({ status: 'idle' });
   let teamRows = $state<TeamRow[]>([]);
   let teamLoading = $state(false);
   let teamError = $state<string | null>(null);
 
+  const cards = $derived(data.status === 'ready' ? data.cards : []);
+  const stock = $derived(data.status === 'ready' ? data.stock : null);
+  const catalogReady = $derived(data.status === 'ready');
+
   void session?.init();
 
-  $effect(() => {
-    const userId = session?.userId ?? null;
-    if (!supabase || !userId) {
-      cards = [];
-      catalogReady = false;
-      stock = null;
-      return;
-    }
-    const client = supabase;
-    const store = createStockStore({
-      fetchStock: () => fetchMyStock(client, userId),
-      save: (changes) => saveStockChanges(client, userId, changes),
+  function createLoader(client: NonNullable<typeof supabase>) {
+    return createUserDataLoader<StockStore>({
+      fetchCards: () => fetchCards(client),
+      createStock: (userId) =>
+        createStockStore({
+          fetchStock: () => fetchMyStock(client, userId),
+          save: (changes) => saveStockChanges(client, userId, changes),
+        }),
+      onChange: (next) => (data = next),
     });
-    void (async () => {
-      try {
-        cards = await fetchCards(client);
-      } catch {
-        cards = [];
-      }
-      if (cards.length > 0) await store.load();
-      stock = store;
-      catalogReady = true;
-    })();
+  }
+  const loader = supabase ? createLoader(supabase) : null;
+
+  // Re-run only when the signed-in user actually changes (not on token refreshes).
+  const uid = $derived(session?.userId ?? null);
+  $effect(() => {
+    const userId = uid;
+    untrack(() => void loader?.switchTo(userId));
   });
+
 
   async function loadTeam(): Promise<void> {
     if (!supabase) return;
@@ -70,9 +70,10 @@
 
   const gate = $derived(
     resolveGate({
-      loading: (session?.loading ?? false) || (session?.userId != null && !catalogReady),
-      signedIn: session?.userId != null,
+      loading: (session?.loading ?? false) || (uid != null && (data.status === 'idle' || data.status === 'loading')),
+      signedIn: uid != null,
       hasCatalogAccess: cards.length > 0,
+      catalogError: data.status === 'error',
     }),
   );
 
@@ -94,6 +95,13 @@
   </main>
 {:else if gate === 'loading'}
   <main><p class="muted">Loading...</p></main>
+{:else if gate === 'error'}
+  <main>
+    <h1>SWU Team Stock</h1>
+    <p class="error" role="alert">Could not load the card catalog. Check your connection and try again.</p>
+    <button type="button" class="primary" onclick={() => loader?.retry()}>Retry</button>
+    <button type="button" onclick={signOut}>Sign out</button>
+  </main>
 {:else if gate === 'login' || gate === 'not-member'}
   <LoginPage
     {methods}
