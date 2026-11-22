@@ -13,3 +13,5 @@ See [docs/DEPLOY.md](docs/DEPLOY.md) for the production deploy checklist.
   an edit.
 - A save that does not finish within a few seconds (stalled network) is reverted and an
   error is shown; retry the edit once the connection is back.
+- A save that times out on the client may still be applied by the server. In that case the
+  UI may show the reverted value until you reload the page.
