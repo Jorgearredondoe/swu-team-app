@@ -6,6 +6,7 @@
   import { createSessionStore } from './lib/state/session.svelte.ts';
   import { createStockStore, type StockStore } from './lib/state/stock.svelte.ts';
   import { createUserDataLoader, type UserData } from './lib/state/userData.ts';
+  import { bindFlushOnHide } from './lib/sync/flushOnHide.ts';
   import { untrack } from 'svelte';
   import { isConfigured, supabase } from './lib/supabase.ts';
   import type { Card, TeamRow } from './lib/types.ts';
@@ -51,6 +52,7 @@
     untrack(() => void loader?.switchTo(userId));
   });
 
+  $effect(() => bindFlushOnHide(window, document, () => void stock?.flush()));
 
   async function loadTeam(): Promise<void> {
     if (!supabase) return;
