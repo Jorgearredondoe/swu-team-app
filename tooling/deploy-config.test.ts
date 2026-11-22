@@ -112,3 +112,28 @@ describe('client auth surface', () => {
     }
   });
 });
+
+describe('keep-alive workflow', () => {
+  const path = '.github/workflows/keepalive.yml';
+
+  it('exists and runs weekly plus on demand', () => {
+    expect(existsSync(join(root, path))).toBe(true);
+    const wf = read(path);
+    expect(wf).toMatch(/cron:\s*'[^']+'/);
+    expect(wf).toContain('workflow_dispatch');
+  });
+
+  it('calls the anon keepalive RPC with repo secrets and fails loudly on non-2xx', () => {
+    const wf = read(path);
+    expect(wf).toContain('curl --fail');
+    expect(wf).toContain('/rest/v1/rpc/keepalive');
+    expect(wf).toContain('secrets.SUPABASE_URL');
+    expect(wf).toContain('secrets.SUPABASE_ANON_KEY');
+  });
+
+  it('never uses a privileged key and requests no token permissions', () => {
+    const wf = read(path);
+    expect(wf.toLowerCase()).not.toContain('service_role');
+    expect(wf).toMatch(/permissions:\s*\{\}/);
+  });
+});
