@@ -87,6 +87,17 @@ describe('deploy checklist', () => {
   });
 });
 
+describe('known limitations', () => {
+  it('documents that edits made right before closing the tab may be lost', () => {
+    for (const file of ['docs/DEPLOY.md', 'README.md']) {
+      const doc = read(file);
+      expect(doc, file).toMatch(/## Known limitations/);
+      expect(doc, file).toMatch(/closing the tab/i);
+    }
+    expect(read('src/lib/sync/flushOnHide.ts')).toMatch(/best effort/i);
+  });
+});
+
 describe('repository hygiene (public repo)', () => {
   it('ignores env files, local member list and keeps only .env.example', () => {
     const ignore = read('.gitignore');
