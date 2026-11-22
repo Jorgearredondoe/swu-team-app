@@ -305,7 +305,6 @@ insert into public.cards (id, set_code, card_number, name, subtitle, rarity, car
 ('IC27-179', 'IC27', 179, 'Morgan Elsbeth', 'Tales Based on Truths', 'Rare', 'Unit', 'https://cdn.starwarsunlimited.com//card_IC_27010179_EN_Morgan_Elsbeth_a107630947.png'),
 ('IC27-187', 'IC27', 187, 'Jar Jar Binks', 'Bumbling Representative', 'Rare', 'Unit', 'https://cdn.starwarsunlimited.com//card_IC_27010187_EN_Jar_Jar_Binks_52decbda9c.png')
 on conflict (set_code, card_number) do update set
-  id = excluded.id,
   name = excluded.name,
   subtitle = excluded.subtitle,
   rarity = excluded.rarity,

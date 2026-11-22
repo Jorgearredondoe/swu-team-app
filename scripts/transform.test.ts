@@ -1,6 +1,8 @@
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import fixture from './fixtures/law-sample.json';
-import { buildSeedSql, summarizeCatalog, transformCards } from './transform.ts';
+import { buildSeedSql, SEED_CONFLICT_CLAUSE, summarizeCatalog, transformCards } from './transform.ts';
+import type { Card } from '../src/lib/types.ts';
 
 type RawPage = Parameters<typeof transformCards>[0];
 const raw = fixture as unknown as RawPage;
@@ -75,6 +77,13 @@ describe('buildSeedSql', () => {
     expect(sql.match(/^\('/gm)).toHaveLength(4);
   });
 
+  it('never rewrites a card id on conflict (stock rows reference it)', () => {
+    const sql = buildSeedSql(cards);
+    expect(sql).toContain(SEED_CONFLICT_CLAUSE);
+    expect(SEED_CONFLICT_CLAUSE).not.toMatch(/id = excluded\.id/);
+    expect(SEED_CONFLICT_CLAUSE).toContain('name = excluded.name');
+  });
+
   it('escapes single quotes and renders null subtitles', () => {
     const sql = buildSeedSql([
       { ...cards[0], id: 'LAW-9', number: 9, name: "Cad's Blaster", subtitle: null },
@@ -96,5 +105,20 @@ describe('summarizeCatalog', () => {
   it('flags cards without an image url', () => {
     const broken = [{ ...cards[0], imageUrl: '' }, ...cards.slice(1)];
     expect(summarizeCatalog(broken).anomalies).toContain('Card LAW-1 has no image url');
+  });
+});
+
+// `supabase test db` mounts only supabase/tests, so pgTAP cannot include ../seed.sql.
+// These guards tie the pgTAP copy and the committed seed to the single generator.
+describe('committed seed artifacts', () => {
+  const read = (path: string) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
+
+  it('supabase/seed.sql is exactly the generator output for supabase/seed/cards.json', () => {
+    const cards = JSON.parse(read('supabase/seed/cards.json')) as Card[];
+    expect(read('supabase/seed.sql')).toBe(buildSeedSql(cards));
+  });
+
+  it('the pgTAP seed test exercises the same conflict clause as the real seed', () => {
+    expect(read('supabase/tests/seed.test.sql')).toContain(SEED_CONFLICT_CLAUSE);
   });
 });
