@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+supabase/seed/members.local.sql
+supabase/.temp/
+supabase/.branches/
+*.local
+.DS_Store
