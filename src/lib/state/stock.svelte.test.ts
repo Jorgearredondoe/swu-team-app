@@ -94,7 +94,7 @@ describe('stock store', () => {
 
   it('does not roll back a card that has a newer pending value when an older batch fails', async () => {
     const results: { resolve: () => void; reject: (e: unknown) => void }[] = [];
-    const save = vi.fn(() => new Promise<void>((resolve, reject) => results.push({ resolve, reject })));
+    const save = vi.fn((_changes: StockChange[]) => new Promise<void>((resolve, reject) => results.push({ resolve, reject })));
     const store = createStockStore({ fetchStock: async () => ({ 'LAW-1': 1, 'ASH-7': 1 }), save, delayMs: 600 });
     await store.load();
     store.set('LAW-1', 3);
