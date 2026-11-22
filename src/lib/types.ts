@@ -12,3 +12,8 @@ export type Card = {
   type: string;
   imageUrl: string;
 };
+
+export type TeamRow = { cardId: string; userId: string; displayName: string; qty: number };
+export type TeamCardTotal = { cardId: string; total: number; byMember: Record<string, number> };
+export type ExportV1 = { version: 1; exportedAt: string; cards: Card[]; stock: TeamRow[] };
+export type StockChange = { cardId: string; qty: number };
