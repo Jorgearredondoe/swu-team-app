@@ -10,7 +10,15 @@ begin
   values ('dev@team.test', 'Dev Tester')
   on conflict (email) do nothing;
 
+  -- Re-runnable: if the auth user already exists (e.g. the member row was deleted and
+  -- re-added), make sure the member row is linked to it and stop.
   if exists (select 1 from auth.users where email = 'dev@team.test') then
+    update public.team_members m
+       set user_id = u.id
+      from auth.users u
+     where u.email = 'dev@team.test'
+       and m.email = 'dev@team.test'
+       and m.user_id is distinct from u.id;
     return;
   end if;
 
