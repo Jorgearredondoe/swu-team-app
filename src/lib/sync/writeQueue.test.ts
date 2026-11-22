@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { createWriteQueue } from './writeQueue.ts';
+import { createWriteQueue, DEFAULT_SAVE_TIMEOUT_MS } from './writeQueue.ts';
 import type { StockChange } from '../types.ts';
 
 beforeEach(() => vi.useFakeTimers());
@@ -14,7 +14,7 @@ describe('createWriteQueue', () => {
     expect(flush).not.toHaveBeenCalled();
     await vi.advanceTimersByTimeAsync(1);
     expect(flush).toHaveBeenCalledTimes(1);
-    expect(flush).toHaveBeenCalledWith([{ cardId: 'LAW-1', qty: 1 }]);
+    expect(flush).toHaveBeenCalledWith([{ cardId: 'LAW-1', qty: 1 }], expect.any(AbortSignal));
   });
 
   it('coalesces repeated changes to the same card into the last value, one batch', async () => {
@@ -31,7 +31,7 @@ describe('createWriteQueue', () => {
     expect(flush).toHaveBeenCalledWith([
       { cardId: 'LAW-1', qty: 2 },
       { cardId: 'LAW-32', qty: 4 },
-    ]);
+    ], expect.any(AbortSignal));
   });
 
   it('does not flush again when nothing new was queued', async () => {
@@ -62,7 +62,7 @@ describe('createWriteQueue', () => {
     queue.enqueue('LAW-1', 4);
     await vi.advanceTimersByTimeAsync(600);
     expect(flush).toHaveBeenCalledTimes(2);
-    expect(flush).toHaveBeenLastCalledWith([{ cardId: 'LAW-1', qty: 4 }]);
+    expect(flush).toHaveBeenLastCalledWith([{ cardId: 'LAW-1', qty: 4 }], expect.any(AbortSignal));
   });
 
   it('flushNow sends pending changes immediately and cancels the timer', async () => {
@@ -70,7 +70,7 @@ describe('createWriteQueue', () => {
     const queue = createWriteQueue({ flush, onError: vi.fn() });
     queue.enqueue('LAW-1', 5);
     await queue.flushNow();
-    expect(flush).toHaveBeenCalledWith([{ cardId: 'LAW-1', qty: 5 }]);
+    expect(flush).toHaveBeenCalledWith([{ cardId: 'LAW-1', qty: 5 }], expect.any(AbortSignal));
     await vi.advanceTimersByTimeAsync(2000);
     expect(flush).toHaveBeenCalledTimes(1);
   });
@@ -136,6 +136,60 @@ describe('createWriteQueue', () => {
       expect(queue.isPending('LAW-1')).toBe(true);
       expect(queue.isPending('ASH-7')).toBe(false);
       calls[0].resolve();
+    });
+  });
+
+  describe('save timeout', () => {
+    it('fails a stalled batch after timeoutMs, aborting its signal, and lets the next batch run', async () => {
+      const signals: AbortSignal[] = [];
+      const flush = vi
+        .fn<(changes: StockChange[], signal: AbortSignal) => Promise<void>>()
+        .mockImplementationOnce((_changes, signal) => {
+          signals.push(signal);
+          return new Promise<void>(() => {}); // never settles
+        })
+        .mockResolvedValue(undefined);
+      const onError = vi.fn();
+      const queue = createWriteQueue({ flush, onError, timeoutMs: 5_000 });
+      queue.enqueue('LAW-1', 1);
+      await vi.advanceTimersByTimeAsync(600);
+      expect(signals[0].aborted).toBe(false);
+      await vi.advanceTimersByTimeAsync(4_999);
+      expect(onError).not.toHaveBeenCalled();
+      await vi.advanceTimersByTimeAsync(1);
+      expect(signals[0].aborted).toBe(true);
+      expect(onError).toHaveBeenCalledWith([{ cardId: 'LAW-1', qty: 1 }], expect.any(Error));
+
+      queue.enqueue('ASH-7', 2);
+      await queue.flushNow();
+      expect(flush).toHaveBeenCalledTimes(2);
+      expect(flush.mock.calls[1][0]).toEqual([{ cardId: 'ASH-7', qty: 2 }]);
+      expect(onError).toHaveBeenCalledTimes(1);
+    });
+
+    it('does not report a batch that settles before the timeout', async () => {
+      const flush = vi.fn(
+        (_changes: StockChange[], _signal: AbortSignal) => new Promise<void>((res) => setTimeout(res, 4_000)),
+      );
+      const onError = vi.fn();
+      const queue = createWriteQueue({ flush, onError, timeoutMs: 5_000 });
+      queue.enqueue('LAW-1', 1);
+      await vi.advanceTimersByTimeAsync(600 + 4_000);
+      await vi.advanceTimersByTimeAsync(10_000);
+      expect(onError).not.toHaveBeenCalled();
+      expect(flush.mock.calls[0][1].aborted).toBe(false);
+    });
+
+    it('uses a default save timeout so a hung request never blocks flushNow forever', async () => {
+      const flush = vi.fn(() => new Promise<void>(() => {}));
+      const onError = vi.fn();
+      const queue = createWriteQueue({ flush, onError });
+      queue.enqueue('LAW-1', 1);
+      let done = false;
+      void queue.flushNow().then(() => (done = true));
+      await vi.advanceTimersByTimeAsync(DEFAULT_SAVE_TIMEOUT_MS);
+      expect(done).toBe(true);
+      expect(onError).toHaveBeenCalledTimes(1);
     });
   });
 });

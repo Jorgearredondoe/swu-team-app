@@ -4,7 +4,7 @@ import type { StockChange } from '../types.ts';
 
 export type StockStoreDeps = {
   fetchStock: () => Promise<Record<string, number>>;
-  save: (changes: StockChange[]) => Promise<void>;
+  save: (changes: StockChange[], signal?: AbortSignal) => Promise<void>;
   delayMs?: number;
 };
 
@@ -21,8 +21,8 @@ export function createStockStore({ fetchStock, save, delayMs }: StockStoreDeps) 
 
   const queue = createWriteQueue({
     delayMs,
-    flush: async (changes) => {
-      await save(changes);
+    flush: async (changes, signal) => {
+      await save(changes, signal);
       for (const c of changes) saved[c.cardId] = c.qty;
     },
     onError: (changes) => {

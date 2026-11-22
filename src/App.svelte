@@ -7,6 +7,7 @@
   import { createStockStore, type StockStore } from './lib/state/stock.svelte.ts';
   import { createUserDataLoader, type UserData } from './lib/state/userData.ts';
   import { bindFlushOnHide } from './lib/sync/flushOnHide.ts';
+  import { flushWithin } from './lib/sync/timeout.ts';
   import { untrack } from 'svelte';
   import { isConfigured, supabase } from './lib/supabase.ts';
   import type { Card, TeamRow } from './lib/types.ts';
@@ -38,7 +39,7 @@
       createStock: (userId) =>
         createStockStore({
           fetchStock: () => fetchMyStock(client, userId),
-          save: (changes) => saveStockChanges(client, userId, changes),
+          save: (changes, signal) => saveStockChanges(client, userId, changes, signal),
         }),
       onChange: (next) => (data = next),
     });
@@ -85,7 +86,8 @@
   }
 
   async function signOut(): Promise<void> {
-    await stock?.flush();
+    // Bounded: a stalled network must not trap the user in a signed-in session.
+    await flushWithin(stock?.flush);
     await session?.signOut();
   }
 </script>

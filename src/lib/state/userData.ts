@@ -1,3 +1,4 @@
+import { flushWithin, FLUSH_TIMEOUT_MS } from '../sync/timeout.ts';
 import type { Card } from '../types.ts';
 
 /** The slice of the stock store the loader needs. */
@@ -13,15 +14,22 @@ export type UserDataDeps<S extends UserStock> = {
   fetchCards: (userId: string) => Promise<Card[]>;
   createStock: (userId: string) => S;
   onChange: (data: UserData<S>) => void;
+  /** Bound on flushing the previous user's writes before switching or signing out. */
+  flushTimeoutMs?: number;
 };
 
 /**
  * Loads catalog + own stock for the signed-in user. Each switch supersedes the previous
  * run (late results are dropped), and the previous user's pending writes are flushed
- * before its store is discarded. A catalog failure is reported as a retryable error;
+ * (bounded by flushTimeoutMs) before its store is discarded. A catalog failure is reported as a retryable error;
  * only a successful, empty catalog means "not on the team".
  */
-export function createUserDataLoader<S extends UserStock>({ fetchCards, createStock, onChange }: UserDataDeps<S>) {
+export function createUserDataLoader<S extends UserStock>({
+  fetchCards,
+  createStock,
+  onChange,
+  flushTimeoutMs = FLUSH_TIMEOUT_MS,
+}: UserDataDeps<S>) {
   let currentUser: string | null = null;
   let currentStock: S | null = null;
   let run = 0;
@@ -57,10 +65,10 @@ export function createUserDataLoader<S extends UserStock>({ fetchCards, createSt
       if (userId === null) {
         run++;
         onChange({ status: 'idle' });
-        await previous?.flush();
+        await flushWithin(previous?.flush, flushTimeoutMs);
         return;
       }
-      await previous?.flush();
+      await flushWithin(previous?.flush, flushTimeoutMs);
       if (userId !== currentUser) return; // superseded while flushing
       await load(userId);
     },

@@ -1,4 +1,5 @@
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { FLUSH_TIMEOUT_MS } from '../sync/timeout.ts';
 import { createUserDataLoader, type UserData, type UserStock } from './userData.ts';
 import type { Card } from '../types.ts';
 
@@ -91,5 +92,32 @@ describe('createUserDataLoader', () => {
     await loader.switchTo(null);
     expect(stocks[1].flush).toHaveBeenCalledTimes(1);
     expect(last()).toEqual({ status: 'idle' });
+  });
+
+  describe('hung previous flush', () => {
+    beforeEach(() => vi.useFakeTimers());
+    afterEach(() => vi.useRealTimers());
+
+    it('loads the next user after the flush bound instead of waiting forever', async () => {
+      const { loader, stocks, last } = setup(async () => [card('LAW-1')]);
+      await loader.switchTo('u1');
+      stocks[0].flush.mockImplementationOnce(() => new Promise<void>(() => {}));
+      const switching = loader.switchTo('u2');
+      await vi.advanceTimersByTimeAsync(FLUSH_TIMEOUT_MS);
+      await switching;
+      expect(last()).toMatchObject({ status: 'ready', cards: [card('LAW-1')] });
+      expect(stocks.map((s) => s.userId)).toEqual(['u1', 'u2']);
+    });
+
+    it('settles sign-out after the flush bound', async () => {
+      const { loader, stocks, last } = setup(async () => [card('LAW-1')]);
+      await loader.switchTo('u1');
+      stocks[0].flush.mockImplementationOnce(() => new Promise<void>(() => {}));
+      let done = false;
+      void loader.switchTo(null).then(() => (done = true));
+      await vi.advanceTimersByTimeAsync(FLUSH_TIMEOUT_MS);
+      expect(done).toBe(true);
+      expect(last()).toEqual({ status: 'idle' });
+    });
   });
 });

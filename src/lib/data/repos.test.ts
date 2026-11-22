@@ -8,11 +8,12 @@ type Result = { data: unknown[] | null; error: { message: string } | null };
 
 /** Chainable stand-in for the PostgREST builder: records calls, resolves pages by range. */
 function fakeClient(pagesByTable: Record<string, unknown[][]>, upsertResult: { error: { message: string } | null } = { error: null }) {
-  const calls: { table: string; ranges: [number, number][]; upserts: { rows: unknown; opts: unknown }[]; filters: [string, unknown][] } = {
+  const calls: { table: string; ranges: [number, number][]; upserts: { rows: unknown; opts: unknown }[]; filters: [string, unknown][]; signals: AbortSignal[] } = {
     table: '',
     filters: [],
     ranges: [],
     upserts: [],
+    signals: [],
   };
   const served: Record<string, number> = {};
   const client = {
@@ -33,7 +34,12 @@ function fakeClient(pagesByTable: Record<string, unknown[][]>, upsertResult: { e
         },
         upsert(rows: unknown, opts: unknown) {
           calls.upserts.push({ rows, opts });
-          return Promise.resolve(upsertResult);
+          return Object.assign(Promise.resolve(upsertResult), {
+            abortSignal(signal: AbortSignal) {
+              calls.signals.push(signal);
+              return this;
+            },
+          });
         },
       };
       return builder;
@@ -112,6 +118,13 @@ describe('stockRepo', () => {
         opts: { onConflict: 'user_id,card_id' },
       },
     ]);
+  });
+
+  it('attaches the abort signal to the upsert request when given', async () => {
+    const { client, calls } = fakeClient({});
+    const controller = new AbortController();
+    await saveStockChanges(client, 'u', [{ cardId: 'LAW-1', qty: 1 }], controller.signal);
+    expect(calls.signals).toEqual([controller.signal]);
   });
 
   it('rejects when the upsert fails so the queue can roll back', async () => {

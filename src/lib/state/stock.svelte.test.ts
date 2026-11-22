@@ -1,8 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { createStockStore } from './stock.svelte.ts';
+import { createStockStore, SAVE_ERROR } from './stock.svelte.ts';
+import { DEFAULT_SAVE_TIMEOUT_MS } from '../sync/writeQueue.ts';
 import type { StockChange } from '../types.ts';
 
-function setup(initial: Record<string, number> = {}, saveImpl?: (c: StockChange[]) => Promise<void>) {
+function setup(initial: Record<string, number> = {}, saveImpl?: (c: StockChange[], signal?: AbortSignal) => Promise<void>) {
   const save = vi.fn(saveImpl ?? (async () => {}));
   const store = createStockStore({ fetchStock: async () => initial, save, delayMs: 600 });
   return { store, save };
@@ -112,5 +113,21 @@ describe('stock store', () => {
     results[1].resolve();
     await vi.advanceTimersByTimeAsync(0);
     expect(store.qty('LAW-1')).toBe(5);
+  });
+
+  it('rolls back a stalled save after the save timeout and aborts its request', async () => {
+    const signals: (AbortSignal | undefined)[] = [];
+    const { store } = setup({ 'LAW-1': 1 }, (_c, signal) => {
+      signals.push(signal);
+      return new Promise<void>(() => {});
+    });
+    await store.load();
+    store.adjust('LAW-1', 1);
+    await vi.advanceTimersByTimeAsync(600);
+    expect(store.qty('LAW-1')).toBe(2);
+    await vi.advanceTimersByTimeAsync(DEFAULT_SAVE_TIMEOUT_MS);
+    expect(signals[0]?.aborted).toBe(true);
+    expect(store.qty('LAW-1')).toBe(1);
+    expect(store.error).toBe(SAVE_ERROR);
   });
 });

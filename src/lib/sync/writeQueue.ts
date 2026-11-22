@@ -1,11 +1,17 @@
 import type { StockChange } from '../types.ts';
+import { withTimeout } from './timeout.ts';
 
 export type WriteQueueOptions = {
-  /** Persists one batch (e.g. a single upsert). Rejecting reports the batch through onError. */
-  flush: (changes: StockChange[]) => Promise<void>;
+  /**
+   * Persists one batch (e.g. a single upsert). Rejecting reports the batch through onError.
+   * `signal` aborts when the batch exceeds `timeoutMs`; pass it to the request.
+   */
+  flush: (changes: StockChange[], signal: AbortSignal) => Promise<void>;
   /** Called with the failed batch so the caller can roll back optimistic state and show a toast. */
   onError: (changes: StockChange[], error: unknown) => void;
   delayMs?: number;
+  /** A batch still unsettled after this long fails (and is rolled back) so the queue moves on. */
+  timeoutMs?: number;
 };
 
 export type WriteQueue = {
@@ -17,13 +23,20 @@ export type WriteQueue = {
 };
 
 export const DEFAULT_DELAY_MS = 600;
+export const DEFAULT_SAVE_TIMEOUT_MS = 8_000;
 
 /**
  * Coalesces per-card changes (last value wins) and flushes one batch after a quiet period.
  * Batches are serialized: at most one is in flight, so writes reach the server in order and
- * a slow older batch can never overwrite a newer value.
+ * a slow older batch can never overwrite a newer value. Each batch is bounded by `timeoutMs`
+ * so a hung request cannot block later saves, sign-out or a user switch.
  */
-export function createWriteQueue({ flush, onError, delayMs = DEFAULT_DELAY_MS }: WriteQueueOptions): WriteQueue {
+export function createWriteQueue({
+  flush,
+  onError,
+  delayMs = DEFAULT_DELAY_MS,
+  timeoutMs = DEFAULT_SAVE_TIMEOUT_MS,
+}: WriteQueueOptions): WriteQueue {
   const pending = new Map<string, number>();
   let timer: ReturnType<typeof setTimeout> | undefined;
   let tail: Promise<void> = Promise.resolve();
@@ -32,8 +45,9 @@ export function createWriteQueue({ flush, onError, delayMs = DEFAULT_DELAY_MS }:
     if (pending.size === 0) return;
     const batch: StockChange[] = [...pending].map(([cardId, qty]) => ({ cardId, qty }));
     pending.clear();
+    const controller = new AbortController();
     try {
-      await flush(batch);
+      await withTimeout(flush(batch, controller.signal), timeoutMs, () => controller.abort());
     } catch (error) {
       onError(batch, error);
     }

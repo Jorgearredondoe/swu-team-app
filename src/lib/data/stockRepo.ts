@@ -16,9 +16,16 @@ export async function fetchMyStock(client: DbClient, userId?: string): Promise<R
   return Object.fromEntries(rows.map((r) => [r.card_id, r.qty]));
 }
 
-export async function saveStockChanges(client: DbClient, userId: string, changes: StockChange[]): Promise<void> {
+export async function saveStockChanges(
+  client: DbClient,
+  userId: string,
+  changes: StockChange[],
+  signal?: AbortSignal,
+): Promise<void> {
   if (changes.length === 0) return;
   const rows = changes.map((c) => ({ user_id: userId, card_id: c.cardId, qty: c.qty }));
-  const { error } = await client.from('stock').upsert(rows, { onConflict: 'user_id,card_id' });
+  let request = client.from('stock').upsert(rows, { onConflict: 'user_id,card_id' });
+  if (signal) request = request.abortSignal(signal);
+  const { error } = await request;
   if (error) throw new Error(error.message);
 }
