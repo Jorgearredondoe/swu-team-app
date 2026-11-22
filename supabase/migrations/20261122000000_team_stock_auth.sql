@@ -1,6 +1,17 @@
 -- Team Stock + Google Auth: schema, RLS, allowlist hook, keep-alive.
 -- Security model: RLS on every table gated by is_team_member(); the
 -- before-user-created hook is the first line (deny by default), RLS the backstop.
+-- Identity: a member is the auth user linked to an allowlist row. The link is made
+-- only from a CONFIRMED email by a trusted trigger; the JWT email claim is never trusted.
+
+-- Future objects in public get no implicit grants (Supabase defaults grant anon and
+-- authenticated everything); each object below grants exactly what it needs.
+alter default privileges for role postgres in schema public
+  revoke all on tables from anon, authenticated;
+alter default privileges for role postgres in schema public
+  revoke all on sequences from anon, authenticated;
+alter default privileges for role postgres in schema public
+  revoke execute on functions from public, anon, authenticated;
 
 -- ---------------------------------------------------------------------------
 -- Tables
@@ -44,11 +55,12 @@ as $$
   select exists (
     select 1
     from public.team_members
-    where email = lower((select auth.jwt() ->> 'email'))
+    where user_id = (select auth.uid())
   );
 $$;
 
--- Links a new auth user to its allowlist row by (lowercased) email.
+-- Links an auth user to its allowlist row by (lowercased) email, but only once the
+-- email is confirmed. GoTrue may confirm in the INSERT or in a later UPDATE.
 create function public.link_team_member()
 returns trigger
 language plpgsql
@@ -56,6 +68,9 @@ security definer
 set search_path = ''
 as $$
 begin
+  if new.email_confirmed_at is null then
+    return new;
+  end if;
   update public.team_members
      set user_id = new.id
    where email = lower(new.email)
@@ -68,7 +83,15 @@ create trigger link_team_member_on_signup
   after insert on auth.users
   for each row execute function public.link_team_member();
 
--- before-user-created hook: deny by default (unknown or null email -> 403).
+create trigger link_team_member_on_confirm
+  after update of email_confirmed_at on auth.users
+  for each row
+  when (old.email_confirmed_at is null and new.email_confirmed_at is not null)
+  execute function public.link_team_member();
+
+-- before-user-created hook: deny by default. Only Google sign-ups of allowlisted emails
+-- pass; a missing provider or email fails closed (403). Payload path verified against
+-- GoTrue v2.197: event.user.app_metadata.provider.
 create function public.hook_before_user_created(event jsonb)
 returns jsonb
 language plpgsql
@@ -76,9 +99,11 @@ stable
 set search_path = ''
 as $$
 declare
-  v_email text := lower(event #>> '{user,email}');
+  v_email    text := lower(event #>> '{user,email}');
+  v_provider text := event #>> '{user,app_metadata,provider}';
 begin
-  if v_email is null
+  if v_provider is distinct from 'google'
+     or v_email is null
      or not exists (select 1 from public.team_members where email = v_email) then
     return jsonb_build_object(
       'error', jsonb_build_object('http_code', 403, 'message', 'Not a team member')

@@ -13,10 +13,10 @@ insert into public.cards (id, set_code, card_number, name, subtitle, rarity, car
 insert into public.team_members (email, display_name) values
   ('alice@team.test', 'Alice'),
   ('bea@team.test', 'Bea');
-insert into auth.users (id, email, aud, role) values
-  ('00000000-0000-0000-0000-00000000000a', 'alice@team.test', 'authenticated', 'authenticated'),
-  ('00000000-0000-0000-0000-00000000000b', 'bea@team.test', 'authenticated', 'authenticated'),
-  ('00000000-0000-0000-0000-00000000000c', 'outsider@other.test', 'authenticated', 'authenticated');
+insert into auth.users (id, email, aud, role, email_confirmed_at) values
+  ('00000000-0000-0000-0000-00000000000a', 'alice@team.test', 'authenticated', 'authenticated', now()),
+  ('00000000-0000-0000-0000-00000000000b', 'bea@team.test', 'authenticated', 'authenticated', now()),
+  ('00000000-0000-0000-0000-00000000000c', 'outsider@other.test', 'authenticated', 'authenticated', now());
 insert into public.stock (user_id, card_id, qty) values
   ('00000000-0000-0000-0000-00000000000b', 'LAW-1', 1);
 
