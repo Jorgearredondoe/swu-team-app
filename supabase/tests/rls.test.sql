@@ -1,6 +1,6 @@
 -- RLS backstop: anon and non-members see nothing; members see team data.
 begin;
-select plan(27);
+select plan(32);
 
 -- Isolate from seeded catalog and local dev data (rolled back with the transaction).
 delete from public.stock;
@@ -73,6 +73,18 @@ select is(
 create table public._future_table_probe (id int);
 select is(has_table_privilege('anon', 'public._future_table_probe', 'SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER'), false, 'anon gets no default privileges on new public tables');
 select is(has_table_privilege('authenticated', 'public._future_table_probe', 'SELECT, INSERT, UPDATE, DELETE, TRUNCATE, REFERENCES, TRIGGER'), false, 'authenticated gets no default privileges on new public tables');
+
+-- Functions: PUBLIC's global default EXECUTE is revoked, so new public functions are
+-- not callable by anon/authenticated unless explicitly granted.
+create function public._future_function_probe() returns int language sql as $$ select 1; $$;
+select is(has_function_privilege('anon', 'public._future_function_probe()', 'execute'), false, 'anon cannot execute new public functions by default');
+select is(has_function_privilege('authenticated', 'public._future_function_probe()', 'execute'), false, 'authenticated cannot execute new public functions by default');
+select is(
+  (select count(*)::int from pg_proc p, aclexplode(coalesce(p.proacl, acldefault('f', p.proowner))) a
+   where p.oid = 'public._future_function_probe()'::regprocedure and a.grantee = 0),
+  0, 'PUBLIC holds no EXECUTE on new public functions');
+select is(has_function_privilege('anon', 'public.keepalive()', 'execute'), true, 'anon keeps its explicit EXECUTE on keepalive()');
+select is(has_function_privilege('authenticated', 'public.is_team_member()', 'execute'), true, 'authenticated keeps its explicit EXECUTE on is_team_member()');
 
 -- is_team_member() hardening
 select ok((select prosecdef from pg_proc where oid = 'public.is_team_member()'::regprocedure), 'is_team_member() is SECURITY DEFINER');

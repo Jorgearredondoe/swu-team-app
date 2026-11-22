@@ -12,6 +12,12 @@ alter default privileges for role postgres in schema public
   revoke all on sequences from anon, authenticated;
 alter default privileges for role postgres in schema public
   revoke execute on functions from public, anon, authenticated;
+-- PUBLIC's EXECUTE on new functions is a GLOBAL default (built into Postgres), which a
+-- per-schema revoke cannot remove: only a global (no `in schema`) revoke does. Without
+-- it every future postgres-owned function would be callable by anon/authenticated.
+-- Functions that must be callable are granted explicitly below (e.g. keepalive to anon).
+alter default privileges for role postgres
+  revoke execute on functions from public;
 
 -- ---------------------------------------------------------------------------
 -- Tables
