@@ -14,6 +14,11 @@ export type Card = {
 };
 
 export type TeamRow = { cardId: string; userId: string; displayName: string; qty: number };
-export type TeamCardTotal = { cardId: string; total: number; byMember: Record<string, number> };
+/** byMember is keyed by user id; display names are for display only and may repeat. */
+export type TeamCardTotal = {
+  cardId: string;
+  total: number;
+  byMember: Record<string, { displayName: string; qty: number }>;
+};
 export type ExportV1 = { version: 1; exportedAt: string; cards: Card[]; stock: TeamRow[] };
 export type StockChange = { cardId: string; qty: number };

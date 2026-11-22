@@ -22,7 +22,7 @@
 
   function breakdown(cardId: string): string | undefined {
     const by = totals.get(cardId)?.byMember ?? {};
-    const text = Object.entries(by).map(([name, q]) => `${name} ${q}`).join(', ');
+    const text = Object.values(by).map((m) => `${m.displayName} ${m.qty}`).join(', ');
     return text || undefined;
   }
 
@@ -39,7 +39,7 @@
   <table>
     <thead><tr><th>Member</th><th>Copies</th><th>Distinct</th></tr></thead>
     <tbody>
-      {#each members as m (m.displayName)}
+      {#each members as m (m.userId)}
         <tr><td>{m.displayName}</td><td>{m.copies}</td><td>{m.distinctCards}</td></tr>
       {:else}
         <tr><td colspan="3" class="muted">No stock recorded yet.</td></tr>
