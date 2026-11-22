@@ -94,6 +94,19 @@ describe('createUserDataLoader', () => {
     expect(last()).toEqual({ status: 'idle' });
   });
 
+  it('emits loading before waiting for the previous user flush', async () => {
+    const { loader, stocks, states } = setup(async () => [card('LAW-1')]);
+    await loader.switchTo('u1');
+    const gate = deferred<void>();
+    stocks[0].flush.mockImplementationOnce(() => gate.promise);
+    const switching = loader.switchTo('u2');
+    await Promise.resolve();
+    expect(states.at(-1)).toEqual({ status: 'loading' });
+    gate.resolve();
+    await switching;
+    expect(states.at(-1)).toMatchObject({ status: 'ready' });
+  });
+
   describe('hung previous flush', () => {
     beforeEach(() => vi.useFakeTimers());
     afterEach(() => vi.useRealTimers());

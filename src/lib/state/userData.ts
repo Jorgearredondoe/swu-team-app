@@ -68,6 +68,8 @@ export function createUserDataLoader<S extends UserStock>({
         await flushWithin(previous?.flush, flushTimeoutMs);
         return;
       }
+      run++; // drop any in-flight load for the previous user
+      onChange({ status: 'loading' });
       await flushWithin(previous?.flush, flushTimeoutMs);
       if (userId !== currentUser) return; // superseded while flushing
       await load(userId);
