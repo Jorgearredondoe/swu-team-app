@@ -1,0 +1,3042 @@
+[
+  {
+    "id": "LAW-1",
+    "setCode": "LAW",
+    "number": 1,
+    "name": "Saw Gerrera",
+    "subtitle": "Bring Down the Empire",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010001_EN_Saw_Gerrera_Leader_0c35c7027d.png"
+  },
+  {
+    "id": "LAW-2",
+    "setCode": "LAW",
+    "number": 2,
+    "name": "Tobias Beckett",
+    "subtitle": "People are Predictable",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010002_EN_Tobias_Beckett_Leader_7301fe8ae1.png"
+  },
+  {
+    "id": "LAW-3",
+    "setCode": "LAW",
+    "number": 3,
+    "name": "Agent Kallus",
+    "subtitle": "Reconsider Your Allegiance",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010003_EN_Agent_Kallus_Leader_670494a334.png"
+  },
+  {
+    "id": "LAW-5",
+    "setCode": "LAW",
+    "number": 5,
+    "name": "Jyn Erso",
+    "subtitle": "Time to Fight",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010005_EN_Jyn_Erso_Leader_3e6b635e8f.png"
+  },
+  {
+    "id": "LAW-8",
+    "setCode": "LAW",
+    "number": 8,
+    "name": "Director Krennic",
+    "subtitle": "Amidst My Achievement",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010008_EN_Director_Krennic_Leader_c2ef2c962c.png"
+  },
+  {
+    "id": "LAW-12",
+    "setCode": "LAW",
+    "number": 12,
+    "name": "Sebulba",
+    "subtitle": "Especially Dangerous Dug",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010012_EN_Sebulba_Leader_34385b6c3f.png"
+  },
+  {
+    "id": "LAW-13",
+    "setCode": "LAW",
+    "number": 13,
+    "name": "Chewbacca",
+    "subtitle": "Hero of Kessel",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010013_EN_Chewbacca_Leader_77969636a0.png"
+  },
+  {
+    "id": "LAW-18",
+    "setCode": "LAW",
+    "number": 18,
+    "name": "Lando Calrissian",
+    "subtitle": "Full Sabacc",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010018_EN_Lando_Calrissian_Leader_6d754de495.png"
+  },
+  {
+    "id": "LAW-19",
+    "setCode": "LAW",
+    "number": 19,
+    "name": "Alliance Outpost",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Base",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010019_EN_Alliance_Outpost_Base_c7a5172a6f.png"
+  },
+  {
+    "id": "LAW-26",
+    "setCode": "LAW",
+    "number": 26,
+    "name": "Shipbreaking Yard",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Base",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010026_EN_Shipbreaking_Yard_Base_8cd9e2115d.png"
+  },
+  {
+    "id": "LAW-29",
+    "setCode": "LAW",
+    "number": 29,
+    "name": "Citadel Research Center",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Base",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010029_EN_Citadel_Research_Center_Base_172e257b14.png"
+  },
+  {
+    "id": "LAW-32",
+    "setCode": "LAW",
+    "number": 32,
+    "name": "Cad Bane",
+    "subtitle": "Now It's My Turn",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010032_EN_Cad_Bane_7729561e38.png"
+  },
+  {
+    "id": "LAW-33",
+    "setCode": "LAW",
+    "number": 33,
+    "name": "Hound's Tooth",
+    "subtitle": "Hunters' Approach",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010033_EN_Hound_s_Tooth_11550c2eea.png"
+  },
+  {
+    "id": "LAW-34",
+    "setCode": "LAW",
+    "number": 34,
+    "name": "Chewbacca",
+    "subtitle": "Mighty Rescuer",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010034_EN_Chewbacca_d5964288a4.png"
+  },
+  {
+    "id": "LAW-36",
+    "setCode": "LAW",
+    "number": 36,
+    "name": "Obi-Wan Kenobi",
+    "subtitle": "Protector of Felucia",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010036_EN_Obi_Wan_Kenobi_21e3aa8861.png"
+  },
+  {
+    "id": "LAW-39",
+    "setCode": "LAW",
+    "number": 39,
+    "name": "Latts Razzi",
+    "subtitle": "Deadly Whipmaster",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010039_EN_Latts_Razzi_5c772f4108.png"
+  },
+  {
+    "id": "LAW-42",
+    "setCode": "LAW",
+    "number": 42,
+    "name": "IG-88",
+    "subtitle": "Programmed to Kill",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010042_EN_IG_88_ad22371b63.png"
+  },
+  {
+    "id": "LAW-44",
+    "setCode": "LAW",
+    "number": 44,
+    "name": "Single Reactor Ignition",
+    "subtitle": "",
+    "rarity": "Legendary",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010044_EN_Single_Reactor_Ignition_d8ce922f55.png"
+  },
+  {
+    "id": "LAW-46",
+    "setCode": "LAW",
+    "number": 46,
+    "name": "Chirrut Îmwe",
+    "subtitle": "I Don't Need Luck",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010046_EN_Chirrut_Imwe_741c6f0508.png"
+  },
+  {
+    "id": "LAW-47",
+    "setCode": "LAW",
+    "number": 47,
+    "name": "Baze Malbus",
+    "subtitle": "Good Luck",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010047_EN_Baze_Malbus_69151ef857.png"
+  },
+  {
+    "id": "LAW-51",
+    "setCode": "LAW",
+    "number": 51,
+    "name": "Beilert Valance",
+    "subtitle": "Target: Vader",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010051_EN_Beilert_Valance_1ec3de5631.png"
+  },
+  {
+    "id": "LAW-52",
+    "setCode": "LAW",
+    "number": 52,
+    "name": "The Mandalorian",
+    "subtitle": "Let's See the Puck",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010052_EN_The_Mandalorian_6f8dd46b91.png"
+  },
+  {
+    "id": "LAW-54",
+    "setCode": "LAW",
+    "number": 54,
+    "name": "Maul",
+    "subtitle": "Master of the Shadow Collective",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010054_EN_Maul_ed1aea8d6a.png"
+  },
+  {
+    "id": "LAW-56",
+    "setCode": "LAW",
+    "number": 56,
+    "name": "Cassian Andor",
+    "subtitle": "Everything For the Rebellion",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010056_EN_Cassian_Andor_d5001486bc.png"
+  },
+  {
+    "id": "LAW-57",
+    "setCode": "LAW",
+    "number": 57,
+    "name": "Benthic “Two Tubes”",
+    "subtitle": "The War Has Just Begun",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010057_EN_Benthic_Two_Tubes_3f974de35f.png"
+  },
+  {
+    "id": "LAW-59",
+    "setCode": "LAW",
+    "number": 59,
+    "name": "Highsinger",
+    "subtitle": "Deadly Droid",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010059_EN_Highsinger_80a51e8905.png"
+  },
+  {
+    "id": "LAW-61",
+    "setCode": "LAW",
+    "number": 61,
+    "name": "Asajj Ventress",
+    "subtitle": "Reluctant Hunter",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010061_EN_Asajj_Ventress_733810ffbe.png"
+  },
+  {
+    "id": "LAW-63",
+    "setCode": "LAW",
+    "number": 63,
+    "name": "L3-37",
+    "subtitle": "Radical Instigator",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010063_EN_L3_37_1fbea8e198.png"
+  },
+  {
+    "id": "LAW-64",
+    "setCode": "LAW",
+    "number": 64,
+    "name": "Zuckuss",
+    "subtitle": "Dangerous",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010064_EN_Zuckuss_8d06f28fb7.png"
+  },
+  {
+    "id": "LAW-66",
+    "setCode": "LAW",
+    "number": 66,
+    "name": "Tear This Ship Apart",
+    "subtitle": "",
+    "rarity": "Legendary",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010066_EN_Tear_This_Ship_Apart_eabd5855c8.png"
+  },
+  {
+    "id": "LAW-67",
+    "setCode": "LAW",
+    "number": 67,
+    "name": "Jyn Erso",
+    "subtitle": "Take the Next Chance",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010067_EN_Jyn_Erso_580ca21b67.png"
+  },
+  {
+    "id": "LAW-69",
+    "setCode": "LAW",
+    "number": 69,
+    "name": "The Ghost",
+    "subtitle": "Home of the Spectres",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010069_EN_The_Ghost_2122085cc5.png"
+  },
+  {
+    "id": "LAW-72",
+    "setCode": "LAW",
+    "number": 72,
+    "name": "Max Rebo",
+    "subtitle": "Encore!",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010072_EN_Max_Rebo_3fe52fe6b1.png"
+  },
+  {
+    "id": "LAW-74",
+    "setCode": "LAW",
+    "number": 74,
+    "name": "Maz Kanata",
+    "subtitle": "Where's My Boyfriend?",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010074_EN_Maz_Kanata_52ccb210d6.png"
+  },
+  {
+    "id": "LAW-76",
+    "setCode": "LAW",
+    "number": 76,
+    "name": "Vult Skerris's Defender",
+    "subtitle": "Secret Project",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010076_EN_Vult_Skerris_s_Defender_53b5675eb5.png"
+  },
+  {
+    "id": "LAW-77",
+    "setCode": "LAW",
+    "number": 77,
+    "name": "Shadow of Stygeon Prime",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010077_EN_Shadow_of_Stygeon_Prime_9459132a29.png"
+  },
+  {
+    "id": "LAW-79",
+    "setCode": "LAW",
+    "number": 79,
+    "name": "K-2SO",
+    "subtitle": "Locking the Vault",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010079_EN_K_2_SO_f4e7122942.png"
+  },
+  {
+    "id": "LAW-80",
+    "setCode": "LAW",
+    "number": 80,
+    "name": "Luke Skywalker",
+    "subtitle": "Profit or Be Destroyed",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010080_EN_Luke_Skywalker_d020bddb01.png"
+  },
+  {
+    "id": "LAW-84",
+    "setCode": "LAW",
+    "number": 84,
+    "name": "Krrsantan",
+    "subtitle": "Hit and Run",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010084_EN_Krrsantan_5c9e7f63d1.png"
+  },
+  {
+    "id": "LAW-85",
+    "setCode": "LAW",
+    "number": 85,
+    "name": "You Hold This",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010085_EN_You_Hold_This_5994efb8f0.png"
+  },
+  {
+    "id": "LAW-86",
+    "setCode": "LAW",
+    "number": 86,
+    "name": "The Stranger",
+    "subtitle": "No Survivors",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010086_EN_The_Stranger_f8fc9e47f4.png"
+  },
+  {
+    "id": "LAW-88",
+    "setCode": "LAW",
+    "number": 88,
+    "name": "Anakin Skywalker",
+    "subtitle": "Prescient Podracer",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010088_EN_Anakin_Skywalker_37dfb5e8aa.png"
+  },
+  {
+    "id": "LAW-92",
+    "setCode": "LAW",
+    "number": 92,
+    "name": "Two-Faced Troig",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010092_EN_Two_Faced_Troig_3c8f270c6b.png"
+  },
+  {
+    "id": "LAW-93",
+    "setCode": "LAW",
+    "number": 93,
+    "name": "Rio Durant",
+    "subtitle": "Beckett's Right Hands",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010093_EN_Rio_Durant_cd9c054c46.png"
+  },
+  {
+    "id": "LAW-94",
+    "setCode": "LAW",
+    "number": 94,
+    "name": "Hondo Ohnaka",
+    "subtitle": "Plays By His Own Rules",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010094_EN_Hondo_Ohnaka_659bba9bf0.png"
+  },
+  {
+    "id": "LAW-96",
+    "setCode": "LAW",
+    "number": 96,
+    "name": "Rhydonium Detonation",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010096_EN_Rhydonium_Detonation_94cb1a1f58.png"
+  },
+  {
+    "id": "LAW-101",
+    "setCode": "LAW",
+    "number": 101,
+    "name": "Lawbringer",
+    "subtitle": "Shadow Over Lothal",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010101_EN_Lawbringer_6acbf254f3.png"
+  },
+  {
+    "id": "LAW-103",
+    "setCode": "LAW",
+    "number": 103,
+    "name": "Display Piece",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010103_EN_Display_Piece_b1f2346135.png"
+  },
+  {
+    "id": "LAW-104",
+    "setCode": "LAW",
+    "number": 104,
+    "name": "Bodhi Rook",
+    "subtitle": "Creating a Diversion",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010104_EN_Bodhi_Rook_a5eeb8261a.png"
+  },
+  {
+    "id": "LAW-117",
+    "setCode": "LAW",
+    "number": 117,
+    "name": "Conveyex Security Captain",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010117_EN_Conveyex_Security_Captain_19eb9a0f56.png"
+  },
+  {
+    "id": "LAW-119",
+    "setCode": "LAW",
+    "number": 119,
+    "name": "Rogue One",
+    "subtitle": "At Any Cost",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010119_EN_Rogue_One_8e28271f7b.png"
+  },
+  {
+    "id": "LAW-126",
+    "setCode": "LAW",
+    "number": 126,
+    "name": "Adventurer Sniper Rifle",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010126_EN_Adventurer_Sniper_Rifle_17bf74ddd0.png"
+  },
+  {
+    "id": "LAW-134",
+    "setCode": "LAW",
+    "number": 134,
+    "name": "Bib Fortuna",
+    "subtitle": "Die Wanna Wanga?",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010134_EN_Bib_Fortuna_ab11dd78e8.png"
+  },
+  {
+    "id": "LAW-139",
+    "setCode": "LAW",
+    "number": 139,
+    "name": "Admiral Motti",
+    "subtitle": "Chain of Command",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010139_EN_Admiral_Motti_0b3138b54c.png"
+  },
+  {
+    "id": "LAW-140",
+    "setCode": "LAW",
+    "number": 140,
+    "name": "Intimidator",
+    "subtitle": "Citadel Overwatch",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010140_EN_Intimidator_f443d9766f.png"
+  },
+  {
+    "id": "LAW-144",
+    "setCode": "LAW",
+    "number": 144,
+    "name": "Phantom",
+    "subtitle": "Spectre Shuttle",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010144_EN_Phantom_b744376092.png"
+  },
+  {
+    "id": "LAW-149",
+    "setCode": "LAW",
+    "number": 149,
+    "name": "Rey",
+    "subtitle": "Skywalker",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010149_EN_Rey_e17dd083c3.png"
+  },
+  {
+    "id": "LAW-150",
+    "setCode": "LAW",
+    "number": 150,
+    "name": "Fulcrum",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010150_EN_Fulcrum_adf8cd758f.png"
+  },
+  {
+    "id": "LAW-170",
+    "setCode": "LAW",
+    "number": 170,
+    "name": "Double-Cross",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010170_EN_Double_Cross_d82d587843.png"
+  },
+  {
+    "id": "LAW-176",
+    "setCode": "LAW",
+    "number": 176,
+    "name": "Sebulba's Podracer",
+    "subtitle": "Taking the Lead",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010176_EN_Sebulba_s_Podracer_109e09eea6.png"
+  },
+  {
+    "id": "LAW-178",
+    "setCode": "LAW",
+    "number": 178,
+    "name": "Persecutor",
+    "subtitle": "Fire Over Scarif",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010178_EN_Persecutor_df017a5040.png"
+  },
+  {
+    "id": "LAW-179",
+    "setCode": "LAW",
+    "number": 179,
+    "name": "Fear and Dead Men",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010179_EN_Fear_and_Dead_Men_8e1b87aa52.png"
+  },
+  {
+    "id": "LAW-184",
+    "setCode": "LAW",
+    "number": 184,
+    "name": "Aerie",
+    "subtitle": "Cloud-Rider Dropship",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010184_EN_Aerie_b95c93d025.png"
+  },
+  {
+    "id": "LAW-185",
+    "setCode": "LAW",
+    "number": 185,
+    "name": "Ben Solo",
+    "subtitle": "Facing the Light",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010185_EN_Ben_Solo_5c3069c8e4.png"
+  },
+  {
+    "id": "LAW-186",
+    "setCode": "LAW",
+    "number": 186,
+    "name": "Enfys Nest's Helmet",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010186_EN_Enfys_Nest_s_Helmet_b9002e5ba4.png"
+  },
+  {
+    "id": "LAW-194",
+    "setCode": "LAW",
+    "number": 194,
+    "name": "Doctor Aphra",
+    "subtitle": "Digging For Answers",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010194_EN_Doctor_Aphra_19383f4cf7.png"
+  },
+  {
+    "id": "LAW-201",
+    "setCode": "LAW",
+    "number": 201,
+    "name": "Thermal Detonator",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010201_EN_Thermal_Detonator_c3de39cd52.png"
+  },
+  {
+    "id": "LAW-214",
+    "setCode": "LAW",
+    "number": 214,
+    "name": "Boba Fett",
+    "subtitle": "For a Price",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010214_EN_Boba_Fett_34cf2cf618.png"
+  },
+  {
+    "id": "LAW-215",
+    "setCode": "LAW",
+    "number": 215,
+    "name": "Vermillion",
+    "subtitle": "Qi'ra's Auction House",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010215_EN_Vermillion_624b650a28.png"
+  },
+  {
+    "id": "LAW-219",
+    "setCode": "LAW",
+    "number": 219,
+    "name": "Anakin's Podracer",
+    "subtitle": "So Wizard!",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010219_EN_Anakin_s_Podracer_03691e902b.png"
+  },
+  {
+    "id": "LAW-221",
+    "setCode": "LAW",
+    "number": 221,
+    "name": "Lieutenant Gorn",
+    "subtitle": "I Deserve Worse",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010221_EN_Lieutenant_Gorn_b48afb7753.png"
+  },
+  {
+    "id": "LAW-223",
+    "setCode": "LAW",
+    "number": 223,
+    "name": "Rose Tico",
+    "subtitle": "Now It's Worth It",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010223_EN_Rose_Tico_d180fbe307.png"
+  },
+  {
+    "id": "LAW-224",
+    "setCode": "LAW",
+    "number": 224,
+    "name": "Liberty",
+    "subtitle": "Draw Their Fire!",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010224_EN_Liberty_f02471eb37.png"
+  },
+  {
+    "id": "LAW-229",
+    "setCode": "LAW",
+    "number": 229,
+    "name": "The Master Codebreaker",
+    "subtitle": "High Stakes",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010229_EN_The_Master_Codebreaker_7b2228a734.png"
+  },
+  {
+    "id": "LAW-233",
+    "setCode": "LAW",
+    "number": 233,
+    "name": "Galen Erso",
+    "subtitle": "Destroying His Creation",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010233_EN_Galen_Erso_e9a5703f8f.png"
+  },
+  {
+    "id": "LAW-237",
+    "setCode": "LAW",
+    "number": 237,
+    "name": "Qui-Gon Jinn",
+    "subtitle": "Influencing Chance",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010237_EN_Qui_Gon_Jinn_facc6edc1e.png"
+  },
+  {
+    "id": "LAW-252",
+    "setCode": "LAW",
+    "number": 252,
+    "name": "Fett's Firespray",
+    "subtitle": "In Pursuit",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010252_EN_Fett_s_Firespray_2d96cda17e.png"
+  },
+  {
+    "id": "LAW-256",
+    "setCode": "LAW",
+    "number": 256,
+    "name": "Fire Across the Galaxy",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_07010256_EN_Fire_Across_the_Galaxy_07d281ca33.png"
+  },
+  {
+    "id": "ASH-1",
+    "setCode": "ASH",
+    "number": 1,
+    "name": "The Armorer",
+    "subtitle": "Steel Shapes Us",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010001_EN_The_Armorer_Leader_7f473bab82.png"
+  },
+  {
+    "id": "ASH-2",
+    "setCode": "ASH",
+    "number": 2,
+    "name": "Fennec Shand",
+    "subtitle": "Ready for War",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010002_EN_Fennec_Shand_Leader_d3ee03d11a.png"
+  },
+  {
+    "id": "ASH-4",
+    "setCode": "ASH",
+    "number": 4,
+    "name": "Grand Admiral Thrawn",
+    "subtitle": "Victory is Mine",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010004_EN_Grand_Admiral_Thrawn_Leader_2700e21a07.png"
+  },
+  {
+    "id": "ASH-7",
+    "setCode": "ASH",
+    "number": 7,
+    "name": "Grand Admiral Sloane",
+    "subtitle": "Holding the Empire Together",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010007_EN_Grand_Admiral_Sloane_Leader_2d2b9c6a51.png"
+  },
+  {
+    "id": "ASH-10",
+    "setCode": "ASH",
+    "number": 10,
+    "name": "Bo-Katan Kryze",
+    "subtitle": "Reclaiming Mandalore",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010010_EN_Bo_Katan_Kryze_Leader_6f767daa86.png"
+  },
+  {
+    "id": "ASH-12",
+    "setCode": "ASH",
+    "number": 12,
+    "name": "Vane",
+    "subtitle": "Quarrelsome Pirate",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010012_EN_Vane_Leader_9be4fbe184.png"
+  },
+  {
+    "id": "ASH-14",
+    "setCode": "ASH",
+    "number": 14,
+    "name": "The Mandalorian",
+    "subtitle": "We Can't Keep Running",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010014_EN_The_Mandalorian_Leader_425f39b1be.png"
+  },
+  {
+    "id": "ASH-18",
+    "setCode": "ASH",
+    "number": 18,
+    "name": "Grogu",
+    "subtitle": "Charming Companion",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010018_EN_Grogu_Leader_d7224ac11c.png"
+  },
+  {
+    "id": "ASH-27",
+    "setCode": "ASH",
+    "number": 27,
+    "name": "Enoch",
+    "subtitle": "Solemn Servant",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010027_EN_Enoch_204ed0a337.png"
+  },
+  {
+    "id": "ASH-28",
+    "setCode": "ASH",
+    "number": 28,
+    "name": "Paz Vizsla",
+    "subtitle": "For a Brighter Future",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010028_EN_Paz_Vizsla_6ba30bbd0d.png"
+  },
+  {
+    "id": "ASH-30",
+    "setCode": "ASH",
+    "number": 30,
+    "name": "Marrok",
+    "subtitle": "Mysterious Warrior",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010030_EN_Marrok_db9081a273.png"
+  },
+  {
+    "id": "ASH-31",
+    "setCode": "ASH",
+    "number": 31,
+    "name": "Hera Syndulla",
+    "subtitle": "Renegade General",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010031_EN_Hera_Syndulla_7337412147.png"
+  },
+  {
+    "id": "ASH-33",
+    "setCode": "ASH",
+    "number": 33,
+    "name": "Grand Admiral Thrawn",
+    "subtitle": "Orchestrating His Return",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010033_EN_Grand_Admiral_Thrawn_3d065c83d4.png"
+  },
+  {
+    "id": "ASH-34",
+    "setCode": "ASH",
+    "number": 34,
+    "name": "Wicket",
+    "subtitle": "Yub Nub!",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010034_EN_Wicket_a7a74d7ab3.png"
+  },
+  {
+    "id": "ASH-36",
+    "setCode": "ASH",
+    "number": 36,
+    "name": "Rukh",
+    "subtitle": "From the Shadows",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010036_EN_Rukh_1b41c4aad7.png"
+  },
+  {
+    "id": "ASH-37",
+    "setCode": "ASH",
+    "number": 37,
+    "name": "Red Leader",
+    "subtitle": "Strike the Reactor",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010037_EN_Red_Leader_52f7f80671.png"
+  },
+  {
+    "id": "ASH-39",
+    "setCode": "ASH",
+    "number": 39,
+    "name": "Baylan Skoll",
+    "subtitle": "Fallen Jedi",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010039_EN_Baylan_Skoll_b1588aece0.png"
+  },
+  {
+    "id": "ASH-40",
+    "setCode": "ASH",
+    "number": 40,
+    "name": "Poe Dameron",
+    "subtitle": "I'll Come Back For You",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010040_EN_Poe_Dameron_c8279a93d4.png"
+  },
+  {
+    "id": "ASH-42",
+    "setCode": "ASH",
+    "number": 42,
+    "name": "Jabba the Hutt",
+    "subtitle": "Eminence of Tatooine",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010042_EN_Jabba_the_Hutt_77b922672a.png"
+  },
+  {
+    "id": "ASH-43",
+    "setCode": "ASH",
+    "number": 43,
+    "name": "Corona Four",
+    "subtitle": "Justice for Alderaan",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010043_EN_Corona_Four_bfdbd0d021.png"
+  },
+  {
+    "id": "ASH-47",
+    "setCode": "ASH",
+    "number": 47,
+    "name": "Gar Saxon",
+    "subtitle": "Coveting Power",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010047_EN_Gar_Saxon_8bb631a3a7.png"
+  },
+  {
+    "id": "ASH-52",
+    "setCode": "ASH",
+    "number": 52,
+    "name": "Chimaera",
+    "subtitle": "A Frightening Reality",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010052_EN_Chimaera_c7c0ad6b5a.png"
+  },
+  {
+    "id": "ASH-53",
+    "setCode": "ASH",
+    "number": 53,
+    "name": "Pre Vizsla",
+    "subtitle": "Strong-Willed Ruler",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010053_EN_Pre_Vizsla_04e122a1d3.png"
+  },
+  {
+    "id": "ASH-55",
+    "setCode": "ASH",
+    "number": 55,
+    "name": "Blade of Talzin",
+    "subtitle": "A Gift of Shadows",
+    "rarity": "Rare",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010055_EN_Blade_of_Talzin_2d80f7696e.png"
+  },
+  {
+    "id": "ASH-60",
+    "setCode": "ASH",
+    "number": 60,
+    "name": "Cobb Vanth",
+    "subtitle": "Let Me Handle This",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010060_EN_Cobb_Vanth_5565b18e39.png"
+  },
+  {
+    "id": "ASH-62",
+    "setCode": "ASH",
+    "number": 62,
+    "name": "The Mandalorian",
+    "subtitle": "Devoted Rescuer",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010062_EN_The_Mandalorian_e5e7dfa30f.png"
+  },
+  {
+    "id": "ASH-63",
+    "setCode": "ASH",
+    "number": 63,
+    "name": "Bo-Katan's Gauntlet",
+    "subtitle": "Reinforce from Above",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010063_EN_Bo_Katan_s_Gauntlet_812134bd85.png"
+  },
+  {
+    "id": "ASH-70",
+    "setCode": "ASH",
+    "number": 70,
+    "name": "At Attin Safety Droid",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010070_EN_At_Attin_Safety_Droid_f68e70e57e.png"
+  },
+  {
+    "id": "ASH-77",
+    "setCode": "ASH",
+    "number": 77,
+    "name": "Ryder Azadi",
+    "subtitle": "Restored Governor",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010077_EN_Ryder_Azadi_e2c33fd5b1.png"
+  },
+  {
+    "id": "ASH-79",
+    "setCode": "ASH",
+    "number": 79,
+    "name": "Koska Reeves",
+    "subtitle": "Warrior of Mandalore",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010079_EN_Koska_Reeves_692e14ba7c.png"
+  },
+  {
+    "id": "ASH-83",
+    "setCode": "ASH",
+    "number": 83,
+    "name": "Summa-verminoth",
+    "subtitle": "",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010083_EN_Summa_verminoth_28b533068a.png"
+  },
+  {
+    "id": "ASH-84",
+    "setCode": "ASH",
+    "number": 84,
+    "name": "Arcana Star Map",
+    "subtitle": "Path to Peridea",
+    "rarity": "Legendary",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010084_EN_Arcana_Star_Map_a582fbd15f.png"
+  },
+  {
+    "id": "ASH-90",
+    "setCode": "ASH",
+    "number": 90,
+    "name": "Reforge",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010090_EN_Reforge_749ccfad88.png"
+  },
+  {
+    "id": "ASH-100",
+    "setCode": "ASH",
+    "number": 100,
+    "name": "Gallius Rax",
+    "subtitle": "Counselor to the Empire",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010100_EN_Gallius_Rax_472b008c1a.png"
+  },
+  {
+    "id": "ASH-101",
+    "setCode": "ASH",
+    "number": 101,
+    "name": "The Great Mothers",
+    "subtitle": "With Strange Magicks",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010101_EN_The_Great_Mothers_8bc7e06789.png"
+  },
+  {
+    "id": "ASH-102",
+    "setCode": "ASH",
+    "number": 102,
+    "name": "Ravager",
+    "subtitle": "Final Imperial Command",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010102_EN_Ravager_ffca62a284.png"
+  },
+  {
+    "id": "ASH-104",
+    "setCode": "ASH",
+    "number": 104,
+    "name": "Dathomiri Magicks",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010104_EN_Dathomiri_Magicks_4f142e543a.png"
+  },
+  {
+    "id": "ASH-105",
+    "setCode": "ASH",
+    "number": 105,
+    "name": "Bo-Katan Kryze",
+    "subtitle": "For All of Mandalore",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010105_EN_Bo_Katan_Kryze_8b45f8a7d8.png"
+  },
+  {
+    "id": "ASH-110",
+    "setCode": "ASH",
+    "number": 110,
+    "name": "Admiral Ackbar",
+    "subtitle": "Assume Attack Coordinates",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010110_EN_Admiral_Ackbar_ab7a92a3e1.png"
+  },
+  {
+    "id": "ASH-112",
+    "setCode": "ASH",
+    "number": 112,
+    "name": "Luke Skywalker",
+    "subtitle": "Answering the Call",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010112_EN_Luke_Skywalker_547807ff50.png"
+  },
+  {
+    "id": "ASH-114",
+    "setCode": "ASH",
+    "number": 114,
+    "name": "Sabine's Lightsaber",
+    "subtitle": "Not Alone",
+    "rarity": "Rare",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010114_EN_Sabine_s_Lightsaber_e147bae5a3.png"
+  },
+  {
+    "id": "ASH-118",
+    "setCode": "ASH",
+    "number": 118,
+    "name": "8D8",
+    "subtitle": "Daimyo's Majordomo",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010118_EN_8_D8_57addbfb63.png"
+  },
+  {
+    "id": "ASH-123",
+    "setCode": "ASH",
+    "number": 123,
+    "name": "Lang",
+    "subtitle": "Arrogant Mercenary",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010123_EN_Lang_d0a213848c.png"
+  },
+  {
+    "id": "ASH-127",
+    "setCode": "ASH",
+    "number": 127,
+    "name": "The Twins",
+    "subtitle": "We Don't Want War",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010127_EN_The_Twins_c77cee0b15.png"
+  },
+  {
+    "id": "ASH-128",
+    "setCode": "ASH",
+    "number": 128,
+    "name": "Bothan-5",
+    "subtitle": "New Republic Prison Ship",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010128_EN_Bothan_5_4a2600a91a.png"
+  },
+  {
+    "id": "ASH-132",
+    "setCode": "ASH",
+    "number": 132,
+    "name": "Queen Soruna",
+    "subtitle": "Willing to Fight",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010132_EN_Queen_Soruna_2cfb444002.png"
+  },
+  {
+    "id": "ASH-135",
+    "setCode": "ASH",
+    "number": 135,
+    "name": "The Darksaber",
+    "subtitle": "Icon of Leadership",
+    "rarity": "Legendary",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010135_EN_The_Darksaber_1da71beb7c.png"
+  },
+  {
+    "id": "ASH-144",
+    "setCode": "ASH",
+    "number": 144,
+    "name": "Vane's Snub Fighter",
+    "subtitle": "Brash and Proud",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010144_EN_Vane_s_Snub_Fighter_b2e9d3220b.png"
+  },
+  {
+    "id": "ASH-148",
+    "setCode": "ASH",
+    "number": 148,
+    "name": "Ninth Sister",
+    "subtitle": "Hulking Inquisitor",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010148_EN_Ninth_Sister_9b6a35fcb7.png"
+  },
+  {
+    "id": "ASH-149",
+    "setCode": "ASH",
+    "number": 149,
+    "name": "Eviscerator",
+    "subtitle": "Burn Them Away",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010149_EN_Eviscerator_74c3497609.png"
+  },
+  {
+    "id": "ASH-151",
+    "setCode": "ASH",
+    "number": 151,
+    "name": "Operation Cinder",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010151_EN_Operation_Cinder_02443471ff.png"
+  },
+  {
+    "id": "ASH-153",
+    "setCode": "ASH",
+    "number": 153,
+    "name": "Green Leader",
+    "subtitle": "Crynyd's Sacrifice",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010153_EN_Green_Leader_c713b7d2c8.png"
+  },
+  {
+    "id": "ASH-155",
+    "setCode": "ASH",
+    "number": 155,
+    "name": "Grogu",
+    "subtitle": "Yes. Yes. Yes.",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010155_EN_Grogu_e0002382c1.png"
+  },
+  {
+    "id": "ASH-161",
+    "setCode": "ASH",
+    "number": 161,
+    "name": "Zeb Orrelios",
+    "subtitle": "Fists Work Every Time",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010161_EN_Zeb_Orrelios_357789c622.png"
+  },
+  {
+    "id": "ASH-163",
+    "setCode": "ASH",
+    "number": 163,
+    "name": "Reckless Sacrifice",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010163_EN_Reckless_Sacrifice_191ee5a81a.png"
+  },
+  {
+    "id": "ASH-168",
+    "setCode": "ASH",
+    "number": 168,
+    "name": "Migs Mayfeld",
+    "subtitle": "How About a Toast?",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010168_EN_Migs_Mayfeld_376ebf5cab.png"
+  },
+  {
+    "id": "ASH-177",
+    "setCode": "ASH",
+    "number": 177,
+    "name": "Onyx Cinder",
+    "subtitle": "Adventure Awaits",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010177_EN_Onyx_Cinder_d654f640b4.png"
+  },
+  {
+    "id": "ASH-179",
+    "setCode": "ASH",
+    "number": 179,
+    "name": "Boba Fett's Rancor",
+    "subtitle": "Emotionally Complex Creature",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010179_EN_Boba_Fett_s_Rancor_93b4afb610.png"
+  },
+  {
+    "id": "ASH-182",
+    "setCode": "ASH",
+    "number": 182,
+    "name": "Unfettered Ambition",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010182_EN_Unfettered_Ambition_6fad37d52c.png"
+  },
+  {
+    "id": "ASH-183",
+    "setCode": "ASH",
+    "number": 183,
+    "name": "Whistling Birds",
+    "subtitle": "",
+    "rarity": "Legendary",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010183_EN_Whistling_Birds_36ae4e3a50.png"
+  },
+  {
+    "id": "ASH-186",
+    "setCode": "ASH",
+    "number": 186,
+    "name": "Treacherous Minefield",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010186_EN_Treacherous_Minefield_bfab94cff7.png"
+  },
+  {
+    "id": "ASH-195",
+    "setCode": "ASH",
+    "number": 195,
+    "name": "Helgait",
+    "subtitle": "Dooku Was a Visionary",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010195_EN_Helgait_664d595bb3.png"
+  },
+  {
+    "id": "ASH-196",
+    "setCode": "ASH",
+    "number": 196,
+    "name": "Gorian Shard's Corsair",
+    "subtitle": "Pirate Warship",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010196_EN_Gorian_Shard_s_Corsair_1f03d328fe.png"
+  },
+  {
+    "id": "ASH-200",
+    "setCode": "ASH",
+    "number": 200,
+    "name": "Rehabilitation",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010200_EN_Rehabilitation_f80b498d9c.png"
+  },
+  {
+    "id": "ASH-202",
+    "setCode": "ASH",
+    "number": 202,
+    "name": "Carson Teva",
+    "subtitle": "There's Something Going On",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010202_EN_Carson_Teva_b5c9b36ee1.png"
+  },
+  {
+    "id": "ASH-203",
+    "setCode": "ASH",
+    "number": 203,
+    "name": "Mando's N-1 Starfighter",
+    "subtitle": "Faster than a Fathier",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010203_EN_Mando_s_N_1_Starfighter_031e279d6b.png"
+  },
+  {
+    "id": "ASH-206",
+    "setCode": "ASH",
+    "number": 206,
+    "name": "Kelleran Beq",
+    "subtitle": "Where are the Others?",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010206_EN_Kelleran_Beq_1f3ab3634d.png"
+  },
+  {
+    "id": "ASH-211",
+    "setCode": "ASH",
+    "number": 211,
+    "name": "Fateful Goodbye",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010211_EN_Fateful_Goodbye_2bb75a6173.png"
+  },
+  {
+    "id": "ASH-212",
+    "setCode": "ASH",
+    "number": 212,
+    "name": "Peli Motto",
+    "subtitle": "You Bring the Cash?",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010212_EN_Peli_Motto_498815d53b.png"
+  },
+  {
+    "id": "ASH-219",
+    "setCode": "ASH",
+    "number": 219,
+    "name": "Jod Na Nawood",
+    "subtitle": "Keeping Secrets",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010219_EN_Jod_Na_Nawood_85312b3a98.png"
+  },
+  {
+    "id": "ASH-224",
+    "setCode": "ASH",
+    "number": 224,
+    "name": "Elzar Mann",
+    "subtitle": "Haunted by a Vision",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010224_EN_Elzar_Mann_030a2dc389.png"
+  },
+  {
+    "id": "ASH-229",
+    "setCode": "ASH",
+    "number": 229,
+    "name": "Camtono",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010229_EN_Camtono_6833891a35.png"
+  },
+  {
+    "id": "ASH-230",
+    "setCode": "ASH",
+    "number": 230,
+    "name": "Improvised Identity",
+    "subtitle": "",
+    "rarity": "Legendary",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010230_EN_Improvised_Identity_ab01f36a80.png"
+  },
+  {
+    "id": "ASH-235",
+    "setCode": "ASH",
+    "number": 235,
+    "name": "Sense Through the Force",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010235_EN_Sense_Through_the_Force_6c956327e7.png"
+  },
+  {
+    "id": "ASH-245",
+    "setCode": "ASH",
+    "number": 245,
+    "name": "Eye of Sion",
+    "subtitle": "Delivered from Exile",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010245_EN_Eye_of_Sion_f1f1d4fef7.png"
+  },
+  {
+    "id": "ASH-247",
+    "setCode": "ASH",
+    "number": 247,
+    "name": "One Must Destroy to Create",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010247_EN_One_Must_Destroy_to_Create_3fde5e27fa.png"
+  },
+  {
+    "id": "ASH-248",
+    "setCode": "ASH",
+    "number": 248,
+    "name": "Neel",
+    "subtitle": "The Cutest Boy",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010248_EN_Neel_c4bbd6e872.png"
+  },
+  {
+    "id": "ASH-257",
+    "setCode": "ASH",
+    "number": 257,
+    "name": "Choose Your Path",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_08010257_EN_Choose_Your_Path_d10dcc3f71.png"
+  },
+  {
+    "id": "HMW-1",
+    "setCode": "HMW",
+    "number": 1,
+    "name": "Asajj Ventress",
+    "subtitle": "No Time For Regret",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010001_EN_Asajj_Ventress_Leader_124235927c.png"
+  },
+  {
+    "id": "HMW-2",
+    "setCode": "HMW",
+    "number": 2,
+    "name": "Maz Kanata",
+    "subtitle": "Eclectic Pirate Queen",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010002_EN_Maz_Kanata_Leader_20c31be47d.png"
+  },
+  {
+    "id": "HMW-6",
+    "setCode": "HMW",
+    "number": 6,
+    "name": "Omega",
+    "subtitle": "Close Your Eyes and Focus",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010006_EN_Omega_Leader_64441186d3.png"
+  },
+  {
+    "id": "HMW-7",
+    "setCode": "HMW",
+    "number": 7,
+    "name": "Darth Vader",
+    "subtitle": "Might of the Empire",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010007_EN_Darth_Vader_Leader_10e58bc113.png"
+  },
+  {
+    "id": "HMW-11",
+    "setCode": "HMW",
+    "number": 11,
+    "name": "Darth Sidious",
+    "subtitle": "There Is No Mercy",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010011_EN_Darth_Sidious_Leader_3c96c8d0b9.png"
+  },
+  {
+    "id": "HMW-13",
+    "setCode": "HMW",
+    "number": 13,
+    "name": "Cham Syndulla",
+    "subtitle": "Hammer of Ryloth",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010013_EN_Cham_Syndulla_Leader_bc82c54d40.png"
+  },
+  {
+    "id": "HMW-16",
+    "setCode": "HMW",
+    "number": 16,
+    "name": "Maul",
+    "subtitle": "Old Master",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010016_EN_Maul_Leader_bde4764f2f.png"
+  },
+  {
+    "id": "HMW-17",
+    "setCode": "HMW",
+    "number": 17,
+    "name": "Osha",
+    "subtitle": "Haunted By Her Past",
+    "rarity": "Rare",
+    "type": "Leader",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010017_EN_Osha_Leader_c54f5d9779.png"
+  },
+  {
+    "id": "HMW-35",
+    "setCode": "HMW",
+    "number": 35,
+    "name": "Hunter",
+    "subtitle": "Everyone Get to Cover!",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010035_EN_Hunter_88d7a2c83e.png"
+  },
+  {
+    "id": "HMW-36",
+    "setCode": "HMW",
+    "number": 36,
+    "name": "Kelnacca",
+    "subtitle": "Solitary Master",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010036_EN_Kelnacca_d50b9e01fd.png"
+  },
+  {
+    "id": "HMW-37",
+    "setCode": "HMW",
+    "number": 37,
+    "name": "Bacta Tank",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010037_EN_Bacta_Tank_46b4bf64b4.png"
+  },
+  {
+    "id": "HMW-39",
+    "setCode": "HMW",
+    "number": 39,
+    "name": "Mother Talzin",
+    "subtitle": "Pledged to the Sisterhood",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010039_EN_Mother_Talzin_6d9372e60c.png"
+  },
+  {
+    "id": "HMW-41",
+    "setCode": "HMW",
+    "number": 41,
+    "name": "Keeper of Skara Nal",
+    "subtitle": "Awoken",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010041_EN_Keeper_of_Skara_Nal_9ad77c7821.png"
+  },
+  {
+    "id": "HMW-42",
+    "setCode": "HMW",
+    "number": 42,
+    "name": "Dooku",
+    "subtitle": "Corruption Must Be Eradicated",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010042_EN_Dooku_4362106f67.png"
+  },
+  {
+    "id": "HMW-43",
+    "setCode": "HMW",
+    "number": 43,
+    "name": "Darth Vader",
+    "subtitle": "Any Methods Necessary",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010043_EN_Darth_Vader_777328fc9f.png"
+  },
+  {
+    "id": "HMW-44",
+    "setCode": "HMW",
+    "number": 44,
+    "name": "Ima-Gun Di",
+    "subtitle": "Holding Out For Resupply",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010044_EN_Ima_Gun_Di_24aa051153.png"
+  },
+  {
+    "id": "HMW-46",
+    "setCode": "HMW",
+    "number": 46,
+    "name": "Krrsantan",
+    "subtitle": "Santo",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010046_EN_Krrsantan_4f3676033c.png"
+  },
+  {
+    "id": "HMW-48",
+    "setCode": "HMW",
+    "number": 48,
+    "name": "Vernestra Rwoh",
+    "subtitle": "We Should Handle This Ourselves",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010048_EN_Vernestra_Rwoh_2fdb958fea.png"
+  },
+  {
+    "id": "HMW-49",
+    "setCode": "HMW",
+    "number": 49,
+    "name": "Greater Sarlacc",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010049_EN_Greater_Sarlacc_6faed95bf2.png"
+  },
+  {
+    "id": "HMW-50",
+    "setCode": "HMW",
+    "number": 50,
+    "name": "Low Altitude Combat",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010050_EN_Low_Altitude_Combat_e4350f2e67.png"
+  },
+  {
+    "id": "HMW-51",
+    "setCode": "HMW",
+    "number": 51,
+    "name": "Third Sister",
+    "subtitle": "Cycle of Vengeance",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010051_EN_Third_Sister_4e89aae60a.png"
+  },
+  {
+    "id": "HMW-53",
+    "setCode": "HMW",
+    "number": 53,
+    "name": "Fett's Firespray",
+    "subtitle": "Settling the Score",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010053_EN_Fett_s_Firespray_45f91d4193.png"
+  },
+  {
+    "id": "HMW-54",
+    "setCode": "HMW",
+    "number": 54,
+    "name": "Seismic Detonation",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010054_EN_Seismic_Detonation_08dc009f7c.png"
+  },
+  {
+    "id": "HMW-55",
+    "setCode": "HMW",
+    "number": 55,
+    "name": "Mae",
+    "subtitle": "Kill the Dream",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010055_EN_Mae_2f936deb14.png"
+  },
+  {
+    "id": "HMW-56",
+    "setCode": "HMW",
+    "number": 56,
+    "name": "Yoda",
+    "subtitle": "Trickster in Exile",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010056_EN_Yoda_b0f7494bf5.png"
+  },
+  {
+    "id": "HMW-58",
+    "setCode": "HMW",
+    "number": 58,
+    "name": "Mysterious Disappearance",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010058_EN_Mysterious_Disappearance_1c8d986cac.png"
+  },
+  {
+    "id": "HMW-62",
+    "setCode": "HMW",
+    "number": 62,
+    "name": "Nuvo Vindi",
+    "subtitle": "Blue Shadow Perfected",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010062_EN_Nuvo_Vindi_269d64ffab.png"
+  },
+  {
+    "id": "HMW-65",
+    "setCode": "HMW",
+    "number": 65,
+    "name": "Clone of the Zillo Beast",
+    "subtitle": "Emperor's Experiment",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010065_EN_Clone_of_the_Zillo_Beast_3e4ed76023.png"
+  },
+  {
+    "id": "HMW-66",
+    "setCode": "HMW",
+    "number": 66,
+    "name": "Carrion Spike",
+    "subtitle": "Harbinger of Tyranny",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010066_EN_Carrion_Spike_a59211fd51.png"
+  },
+  {
+    "id": "HMW-67",
+    "setCode": "HMW",
+    "number": 67,
+    "name": "The Great Progenitor",
+    "subtitle": "First of the Drengir",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010067_EN_The_Great_Progenitor_b537faa6f6.png"
+  },
+  {
+    "id": "HMW-74",
+    "setCode": "HMW",
+    "number": 74,
+    "name": "Yord Fandar",
+    "subtitle": "Devoutly Disciplined",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010074_EN_Yord_Fandar_9a93fa26a5.png"
+  },
+  {
+    "id": "HMW-77",
+    "setCode": "HMW",
+    "number": 77,
+    "name": "Boss Nass",
+    "subtitle": "Otoh Gunga Boss",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010077_EN_Boss_Nass_dcebc34db8.png"
+  },
+  {
+    "id": "HMW-78",
+    "setCode": "HMW",
+    "number": 78,
+    "name": "Qui-Gon Jinn",
+    "subtitle": "We'll Handle This",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010078_EN_Qui_Gon_Jinn_290bee97ca.png"
+  },
+  {
+    "id": "HMW-82",
+    "setCode": "HMW",
+    "number": 82,
+    "name": "Nala Se",
+    "subtitle": "Silent Survivor",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010082_EN_Nala_Se_da144337d5.png"
+  },
+  {
+    "id": "HMW-94",
+    "setCode": "HMW",
+    "number": 94,
+    "name": "Sando Aqua Monster",
+    "subtitle": "",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010094_EN_Sando_Aqua_Monster_a2d9e73c85.png"
+  },
+  {
+    "id": "HMW-99",
+    "setCode": "HMW",
+    "number": 99,
+    "name": "Always a Bigger Fish",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010099_EN_Always_a_Bigger_Fish_e9b97daca3.png"
+  },
+  {
+    "id": "HMW-104",
+    "setCode": "HMW",
+    "number": 104,
+    "name": "Garnac",
+    "subtitle": "Let the Hunt Begin!",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010104_EN_Garnac_b400d2396a.png"
+  },
+  {
+    "id": "HMW-108",
+    "setCode": "HMW",
+    "number": 108,
+    "name": "The First Legion",
+    "subtitle": "Vader's Fist",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010108_EN_The_First_Legion_85ae7bc706.png"
+  },
+  {
+    "id": "HMW-110",
+    "setCode": "HMW",
+    "number": 110,
+    "name": "Emperor Palpatine",
+    "subtitle": "Consolidating Power",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010110_EN_Emperor_Palpatine_209c4bd442.png"
+  },
+  {
+    "id": "HMW-114",
+    "setCode": "HMW",
+    "number": 114,
+    "name": "Breach",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010114_EN_Breach_8d3630afa9.png"
+  },
+  {
+    "id": "HMW-117",
+    "setCode": "HMW",
+    "number": 117,
+    "name": "Chewbacca",
+    "subtitle": "Resourceful Wookiee",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010117_EN_Chewbacca_de58c19ed2.png"
+  },
+  {
+    "id": "HMW-119",
+    "setCode": "HMW",
+    "number": 119,
+    "name": "Saw Gerrera",
+    "subtitle": "Shadowlands Insurgent",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010119_EN_Saw_Gerrera_db12679128.png"
+  },
+  {
+    "id": "HMW-123",
+    "setCode": "HMW",
+    "number": 123,
+    "name": "King Grakchawwaa",
+    "subtitle": "King of Kashyyyk",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010123_EN_King_Grakchawwaa_fe13c81476.png"
+  },
+  {
+    "id": "HMW-124",
+    "setCode": "HMW",
+    "number": 124,
+    "name": "Luminara Unduli",
+    "subtitle": "Besieged General",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010124_EN_Luminara_Unduli_885b73a878.png"
+  },
+  {
+    "id": "HMW-128",
+    "setCode": "HMW",
+    "number": 128,
+    "name": "Mace Windu",
+    "subtitle": "Austere Centrist",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010128_EN_Mace_Windu_c4b212955d.png"
+  },
+  {
+    "id": "HMW-130",
+    "setCode": "HMW",
+    "number": 130,
+    "name": "Emerie Karr",
+    "subtitle": "For Your Own Good",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010130_EN_Emerie_Karr_37134ba7fd.png"
+  },
+  {
+    "id": "HMW-134",
+    "setCode": "HMW",
+    "number": 134,
+    "name": "Zam Wesell",
+    "subtitle": "Not What She Seems",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010134_EN_Zam_Wesell_6ec7b8a69c.png"
+  },
+  {
+    "id": "HMW-138",
+    "setCode": "HMW",
+    "number": 138,
+    "name": "Commander Gree",
+    "subtitle": "Of the 41st Elite Corps",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010138_EN_Commander_Gree_ff82b3473d.png"
+  },
+  {
+    "id": "HMW-145",
+    "setCode": "HMW",
+    "number": 145,
+    "name": "Origin Tree Shyyyo",
+    "subtitle": "",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010145_EN_Origin_Tree_Shyyyo_b8bdab65de.png"
+  },
+  {
+    "id": "HMW-147",
+    "setCode": "HMW",
+    "number": 147,
+    "name": "Beast Lair",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010147_EN_Beast_Lair_a6593c2709.png"
+  },
+  {
+    "id": "HMW-152",
+    "setCode": "HMW",
+    "number": 152,
+    "name": "Babwa Venomor",
+    "subtitle": "Burning Kashyyyk",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010152_EN_Babwa_Venomor_c09fdc93f5.png"
+  },
+  {
+    "id": "HMW-154",
+    "setCode": "HMW",
+    "number": 154,
+    "name": "Dooku's Solar Sailer",
+    "subtitle": "Droid Army Portent",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010154_EN_Dooku_s_Solar_Sailer_6ead938ebf.png"
+  },
+  {
+    "id": "HMW-159",
+    "setCode": "HMW",
+    "number": 159,
+    "name": "General Grievous",
+    "subtitle": "Scourge of Dathomir",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010159_EN_General_Grievous_d6ede6c307.png"
+  },
+  {
+    "id": "HMW-161",
+    "setCode": "HMW",
+    "number": 161,
+    "name": "Raze to Ruin",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010161_EN_Raze_to_Ruin_8793cd252e.png"
+  },
+  {
+    "id": "HMW-164",
+    "setCode": "HMW",
+    "number": 164,
+    "name": "Chief Chirpa",
+    "subtitle": "Defiant Elder",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010164_EN_Chief_Chirpa_9f83bc5513.png"
+  },
+  {
+    "id": "HMW-168",
+    "setCode": "HMW",
+    "number": 168,
+    "name": "Ezra Bridger",
+    "subtitle": "What Are You Afraid Of?",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010168_EN_Ezra_Bridger_deabf48995.png"
+  },
+  {
+    "id": "HMW-169",
+    "setCode": "HMW",
+    "number": 169,
+    "name": "Crosshair",
+    "subtitle": "I've Changed",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010169_EN_Crosshair_ca6ea21640.png"
+  },
+  {
+    "id": "HMW-173",
+    "setCode": "HMW",
+    "number": 173,
+    "name": "Rebel Operation",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010173_EN_Rebel_Operation_d609b1da79.png"
+  },
+  {
+    "id": "HMW-174",
+    "setCode": "HMW",
+    "number": 174,
+    "name": "Maul",
+    "subtitle": "Only Revenge Remains",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010174_EN_Maul_e7da576e50.png"
+  },
+  {
+    "id": "HMW-182",
+    "setCode": "HMW",
+    "number": 182,
+    "name": "Arena Nexu",
+    "subtitle": "Starved for Prey",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010182_EN_Arena_Nexu_8403e53578.png"
+  },
+  {
+    "id": "HMW-185",
+    "setCode": "HMW",
+    "number": 185,
+    "name": "Ty Yorrick",
+    "subtitle": "Monster Hunter",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010185_EN_Ty_Yorrick_e08fdfd275.png"
+  },
+  {
+    "id": "HMW-188",
+    "setCode": "HMW",
+    "number": 188,
+    "name": "Giant Gorax",
+    "subtitle": "",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010188_EN_Giant_Gorax_8f32548563.png"
+  },
+  {
+    "id": "HMW-196",
+    "setCode": "HMW",
+    "number": 196,
+    "name": "Qimir",
+    "subtitle": "Everyone Has a Weakness",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010196_EN_Qimir_79b7e3383b.png"
+  },
+  {
+    "id": "HMW-197",
+    "setCode": "HMW",
+    "number": 197,
+    "name": "Cid Scaleback",
+    "subtitle": "Can't Be Trusted",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010197_EN_Cid_Scaleback_eb8efc11c2.png"
+  },
+  {
+    "id": "HMW-200",
+    "setCode": "HMW",
+    "number": 200,
+    "name": "Rish Loo",
+    "subtitle": "Traitorous Minister",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010200_EN_Rish_Loo_71936e413f.png"
+  },
+  {
+    "id": "HMW-204",
+    "setCode": "HMW",
+    "number": 204,
+    "name": "Nightbrother",
+    "subtitle": "Maul's Gauntlet",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010204_EN_Nightbrother_9544c8aaf2.png"
+  },
+  {
+    "id": "HMW-208",
+    "setCode": "HMW",
+    "number": 208,
+    "name": "Luke Skywalker",
+    "subtitle": "Dreaming Farmboy",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010208_EN_Luke_Skywalker_01a840e17b.png"
+  },
+  {
+    "id": "HMW-212",
+    "setCode": "HMW",
+    "number": 212,
+    "name": "The Chieftain",
+    "subtitle": "Here Since the Oceans Dried",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010212_EN_The_Chieftain_ec5253e121.png"
+  },
+  {
+    "id": "HMW-214",
+    "setCode": "HMW",
+    "number": 214,
+    "name": "Phee Genoa",
+    "subtitle": "Liberator of Ancient Wonders",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010214_EN_Phee_Genoa_e693c2c899.png"
+  },
+  {
+    "id": "HMW-215",
+    "setCode": "HMW",
+    "number": 215,
+    "name": "L3-37",
+    "subtitle": "We're Programmed to Learn",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010215_EN_L3_37_c63083b495.png"
+  },
+  {
+    "id": "HMW-219",
+    "setCode": "HMW",
+    "number": 219,
+    "name": "Jaxxon",
+    "subtitle": "I Can Hear You Breathing!",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010219_EN_Jaxxon_f35e53f133.png"
+  },
+  {
+    "id": "HMW-223",
+    "setCode": "HMW",
+    "number": 223,
+    "name": "Therm Scissorpunch",
+    "subtitle": "Boastful Gambler",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010223_EN_Therm_Scissorpunch_eb1835629f.png"
+  },
+  {
+    "id": "HMW-225",
+    "setCode": "HMW",
+    "number": 225,
+    "name": "Boba Fett",
+    "subtitle": "Family Found",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010225_EN_Boba_Fett_bd2741eae1.png"
+  },
+  {
+    "id": "HMW-234",
+    "setCode": "HMW",
+    "number": 234,
+    "name": "Ritual Dragon",
+    "subtitle": "",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010234_EN_Ritual_Dragon_80ea375b65.png"
+  },
+  {
+    "id": "HMW-238",
+    "setCode": "HMW",
+    "number": 238,
+    "name": "Exploit Confidence",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Event",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010238_EN_Exploit_Confidence_bd528055df.png"
+  },
+  {
+    "id": "HMW-248",
+    "setCode": "HMW",
+    "number": 248,
+    "name": "Defoliator Tank",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010248_EN_Defoliator_Tank_b4cccbfb12.png"
+  },
+  {
+    "id": "HMW-260",
+    "setCode": "HMW",
+    "number": 260,
+    "name": "Queen Amidala",
+    "subtitle": "Retaking Theed",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010260_EN_Queen_Amidala_a81b2f58d3.png"
+  },
+  {
+    "id": "HMW-265",
+    "setCode": "HMW",
+    "number": 265,
+    "name": "Twi'lek Kalikori",
+    "subtitle": "",
+    "rarity": "Rare",
+    "type": "Upgrade",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_09010265_EN_Twi_lek_Kalikori_b4c4719f1a.png"
+  },
+  {
+    "id": "IC27-13",
+    "setCode": "IC27",
+    "number": 13,
+    "name": "Nute Gunray",
+    "subtitle": "Ring Ring, Space Calling",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010013_EN_Nute_Gunray_b5b2b5de78.png"
+  },
+  {
+    "id": "IC27-14",
+    "setCode": "IC27",
+    "number": 14,
+    "name": "Dryden Vos",
+    "subtitle": "Thumb-Spiking the Scale",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010014_EN_Dryden_Vos_5d045399b1.png"
+  },
+  {
+    "id": "IC27-19",
+    "setCode": "IC27",
+    "number": 19,
+    "name": "Soulless One",
+    "subtitle": "Soulless Fun",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010019_EN_Soulless_One_322f3ce3bd.png"
+  },
+  {
+    "id": "IC27-21",
+    "setCode": "IC27",
+    "number": 21,
+    "name": "General Grievous",
+    "subtitle": "Four-Armed Menace",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010021_EN_General_Grievous_bd3c1ae609.png"
+  },
+  {
+    "id": "IC27-23",
+    "setCode": "IC27",
+    "number": 23,
+    "name": "Grand Moff Tarkin",
+    "subtitle": "Cracking Down on Lothal",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010023_EN_Grand_Moff_Tarkin_a3b5dfc386.png"
+  },
+  {
+    "id": "IC27-24",
+    "setCode": "IC27",
+    "number": 24,
+    "name": "Grand Admiral Thrawn",
+    "subtitle": "Listen to Me Carefully",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010024_EN_Grand_Admiral_Thrawn_160f2631f8.png"
+  },
+  {
+    "id": "IC27-26",
+    "setCode": "IC27",
+    "number": 26,
+    "name": "Darth Sidious",
+    "subtitle": "Move Against the Jedi",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010026_EN_Darth_Sidious_48a6a3019b.png"
+  },
+  {
+    "id": "IC27-29",
+    "setCode": "IC27",
+    "number": 29,
+    "name": "Chimaera",
+    "subtitle": "Grand Admiral's Might",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010029_EN_Chimaera_3ff7f07221.png"
+  },
+  {
+    "id": "IC27-31",
+    "setCode": "IC27",
+    "number": 31,
+    "name": "BB-8",
+    "subtitle": "Frazzled Friend",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010031_EN_BB_8_58aadac432.png"
+  },
+  {
+    "id": "IC27-35",
+    "setCode": "IC27",
+    "number": 35,
+    "name": "Yoda",
+    "subtitle": "A Disturbing Puzzle",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010035_EN_Yoda_c3a8857a22.png"
+  },
+  {
+    "id": "IC27-37",
+    "setCode": "IC27",
+    "number": 37,
+    "name": "Finn",
+    "subtitle": "Stand and Fight",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010037_EN_Finn_a3ccb9b3b4.png"
+  },
+  {
+    "id": "IC27-38",
+    "setCode": "IC27",
+    "number": 38,
+    "name": "Admiral Holdo",
+    "subtitle": "We Are the Spark",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010038_EN_Admiral_Holdo_cccec96f82.png"
+  },
+  {
+    "id": "IC27-39",
+    "setCode": "IC27",
+    "number": 39,
+    "name": "Ahsoka Tano",
+    "subtitle": "Not on My Death Watch",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010039_EN_Ahsoka_Tano_9c345f3dba.png"
+  },
+  {
+    "id": "IC27-41",
+    "setCode": "IC27",
+    "number": 41,
+    "name": "Captain Rex",
+    "subtitle": "Staunch Advocate",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010041_EN_Captain_Rex_945528fff9.png"
+  },
+  {
+    "id": "IC27-42",
+    "setCode": "IC27",
+    "number": 42,
+    "name": "Obi-Wan Kenobi",
+    "subtitle": "I Sense a Trap",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010042_EN_Obi_Wan_Kenobi_ddd15b0d11.png"
+  },
+  {
+    "id": "IC27-43",
+    "setCode": "IC27",
+    "number": 43,
+    "name": "Raddus",
+    "subtitle": "Hope of the Resistance",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010043_EN_Raddus_95f9a1727d.png"
+  },
+  {
+    "id": "IC27-45",
+    "setCode": "IC27",
+    "number": 45,
+    "name": "Qi'ra",
+    "subtitle": "Survivor",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010045_EN_Qi_ra_c314325801.png"
+  },
+  {
+    "id": "IC27-57",
+    "setCode": "IC27",
+    "number": 57,
+    "name": "Director Krennic",
+    "subtitle": "Architect of Annihilation",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010057_EN_Director_Krennic_aedd4762ce.png"
+  },
+  {
+    "id": "IC27-60",
+    "setCode": "IC27",
+    "number": 60,
+    "name": "Jabba the Hutt",
+    "subtitle": "Bounties Left and Right",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010060_EN_Jabba_the_Hutt_a682189b3a.png"
+  },
+  {
+    "id": "IC27-62",
+    "setCode": "IC27",
+    "number": 62,
+    "name": "Admiral Motti",
+    "subtitle": "Conan in Command",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010062_EN_Admiral_Motti_3ff9ad6288.png"
+  },
+  {
+    "id": "IC27-63",
+    "setCode": "IC27",
+    "number": 63,
+    "name": "Kylo's TIE Silencer",
+    "subtitle": "Follow My Lead",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010063_EN_Kylo_s_TIE_Silencer_acb214d324.png"
+  },
+  {
+    "id": "IC27-65",
+    "setCode": "IC27",
+    "number": 65,
+    "name": "Darth Maul",
+    "subtitle": "Mindful Apprentice",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010065_EN_Darth_Maul_a05d90787e.png"
+  },
+  {
+    "id": "IC27-66",
+    "setCode": "IC27",
+    "number": 66,
+    "name": "Mother Talzin",
+    "subtitle": "The Time Has Come",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010066_EN_Mother_Talzin_34daab9249.png"
+  },
+  {
+    "id": "IC27-67",
+    "setCode": "IC27",
+    "number": 67,
+    "name": "Darth Vader",
+    "subtitle": "Useless to Resist",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010067_EN_Darth_Vader_03bc545162.png"
+  },
+  {
+    "id": "IC27-68",
+    "setCode": "IC27",
+    "number": 68,
+    "name": "Devastator",
+    "subtitle": "Lord Vader's Flagship",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010068_EN_Devastator_90974e6e23.png"
+  },
+  {
+    "id": "IC27-70",
+    "setCode": "IC27",
+    "number": 70,
+    "name": "C-3PO",
+    "subtitle": "Impulse Buy",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010070_EN_C_3_PO_28277e82aa.png"
+  },
+  {
+    "id": "IC27-71",
+    "setCode": "IC27",
+    "number": 71,
+    "name": "Avar Kriss",
+    "subtitle": "For Light and Life",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010071_EN_Avar_Kriss_8e19589b3d.png"
+  },
+  {
+    "id": "IC27-76",
+    "setCode": "IC27",
+    "number": 76,
+    "name": "Clone Commander Cody",
+    "subtitle": "Loyal to the Republic",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010076_EN_Clone_Commander_Cody_41fae3c233.png"
+  },
+  {
+    "id": "IC27-77",
+    "setCode": "IC27",
+    "number": 77,
+    "name": "Mon Mothma",
+    "subtitle": "Truth is an Abyss",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010077_EN_Mon_Mothma_2d2b7f7f5d.png"
+  },
+  {
+    "id": "IC27-78",
+    "setCode": "IC27",
+    "number": 78,
+    "name": "Anakin Skywalker",
+    "subtitle": "Destined for Darkness",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010078_EN_Anakin_Skywalker_e9de1e27b2.png"
+  },
+  {
+    "id": "IC27-81",
+    "setCode": "IC27",
+    "number": 81,
+    "name": "Mace Windu",
+    "subtitle": "Dropping By",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010081_EN_Mace_Windu_f9154e6f8e.png"
+  },
+  {
+    "id": "IC27-83",
+    "setCode": "IC27",
+    "number": 83,
+    "name": "Padmé Amidala",
+    "subtitle": "With Great Pleasure",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010083_EN_Padme_Amidala_65856f9f85.png"
+  },
+  {
+    "id": "IC27-84",
+    "setCode": "IC27",
+    "number": 84,
+    "name": "Negotiator",
+    "subtitle": "Prepare the Troops",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010084_EN_Negotiator_8c18e7df41.png"
+  },
+  {
+    "id": "IC27-86",
+    "setCode": "IC27",
+    "number": 86,
+    "name": "Enfys Nest",
+    "subtitle": "No More!",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010086_EN_Enfys_Nest_cf38dc4a3e.png"
+  },
+  {
+    "id": "IC27-101",
+    "setCode": "IC27",
+    "number": 101,
+    "name": "General Hux",
+    "subtitle": "Fire Ventral Cannons!",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010101_EN_General_Hux_0401cba812.png"
+  },
+  {
+    "id": "IC27-102",
+    "setCode": "IC27",
+    "number": 102,
+    "name": "Third Sister",
+    "subtitle": "Reckless",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010102_EN_Third_Sister_fadcea8b66.png"
+  },
+  {
+    "id": "IC27-103",
+    "setCode": "IC27",
+    "number": 103,
+    "name": "Grand Inquisitor",
+    "subtitle": "How the Mighty Will Fall",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010103_EN_Grand_Inquisitor_ed6e846ab4.png"
+  },
+  {
+    "id": "IC27-104",
+    "setCode": "IC27",
+    "number": 104,
+    "name": "The Inquisitor's TIE",
+    "subtitle": "Would Rather Win",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010104_EN_The_Inquisitor_s_TIE_713aae37bb.png"
+  },
+  {
+    "id": "IC27-106",
+    "setCode": "IC27",
+    "number": 106,
+    "name": "Kylo Ren",
+    "subtitle": "Relentless",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010106_EN_Kylo_Ren_a52937bf04.png"
+  },
+  {
+    "id": "IC27-107",
+    "setCode": "IC27",
+    "number": 107,
+    "name": "Aurra Sing",
+    "subtitle": "Getting Even",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010107_EN_Aurra_Sing_6f5ea30eee.png"
+  },
+  {
+    "id": "IC27-109",
+    "setCode": "IC27",
+    "number": 109,
+    "name": "Supreme Leader Snoke",
+    "subtitle": "Darkness Rising",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010109_EN_Supreme_Leader_Snoke_5be1175f0a.png"
+  },
+  {
+    "id": "IC27-110",
+    "setCode": "IC27",
+    "number": 110,
+    "name": "Supremacy",
+    "subtitle": "Destroy the Resistance",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010110_EN_Supremacy_cb0c1d78b0.png"
+  },
+  {
+    "id": "IC27-113",
+    "setCode": "IC27",
+    "number": 113,
+    "name": "Ezra Bridger",
+    "subtitle": "Down With the Freedom",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010113_EN_Ezra_Bridger_c32096fc57.png"
+  },
+  {
+    "id": "IC27-115",
+    "setCode": "IC27",
+    "number": 115,
+    "name": "Poe Dameron",
+    "subtitle": "Hero of the Resistance",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010115_EN_Poe_Dameron_8dd1712a6c.png"
+  },
+  {
+    "id": "IC27-116",
+    "setCode": "IC27",
+    "number": 116,
+    "name": "Black One",
+    "subtitle": "Draw Fire, Twice",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010116_EN_Black_One_2cadc4105d.png"
+  },
+  {
+    "id": "IC27-119",
+    "setCode": "IC27",
+    "number": 119,
+    "name": "Sabine Wren",
+    "subtitle": "Liberator of Krownest",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010119_EN_Sabine_Wren_39ff6e8f7a.png"
+  },
+  {
+    "id": "IC27-120",
+    "setCode": "IC27",
+    "number": 120,
+    "name": "Rey",
+    "subtitle": "Embracing Destiny",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010120_EN_Rey_d3998cf8fb.png"
+  },
+  {
+    "id": "IC27-122",
+    "setCode": "IC27",
+    "number": 122,
+    "name": "The Ghost",
+    "subtitle": "Whale Watching",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010122_EN_The_Ghost_44044e9edd.png"
+  },
+  {
+    "id": "IC27-123",
+    "setCode": "IC27",
+    "number": 123,
+    "name": "Jyn Erso",
+    "subtitle": "Her Father's Revenge",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010123_EN_Jyn_Erso_fbd63e6163.png"
+  },
+  {
+    "id": "IC27-124",
+    "setCode": "IC27",
+    "number": 124,
+    "name": "K-2SO",
+    "subtitle": "Evacuate the Vault Door",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010124_EN_K_2_SO_db2f6d9b5b.png"
+  },
+  {
+    "id": "IC27-126",
+    "setCode": "IC27",
+    "number": 126,
+    "name": "Saw Gerrera",
+    "subtitle": "For the Cause",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010126_EN_Saw_Gerrera_70db0ac168.png"
+  },
+  {
+    "id": "IC27-138",
+    "setCode": "IC27",
+    "number": 138,
+    "name": "Banshee",
+    "subtitle": "Scream Machine",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010138_EN_Banshee_8bd3cdfd8a.png"
+  },
+  {
+    "id": "IC27-142",
+    "setCode": "IC27",
+    "number": 142,
+    "name": "Greedo",
+    "subtitle": "Big-Timer",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010142_EN_Greedo_c16612b0f0.png"
+  },
+  {
+    "id": "IC27-144",
+    "setCode": "IC27",
+    "number": 144,
+    "name": "Jango Fett",
+    "subtitle": "Straight Shooter",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010144_EN_Jango_Fett_48e69679fe.png"
+  },
+  {
+    "id": "IC27-145",
+    "setCode": "IC27",
+    "number": 145,
+    "name": "Poggle the Lesser",
+    "subtitle": "Secret Designs",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010145_EN_Poggle_the_Lesser_3f26dc833a.png"
+  },
+  {
+    "id": "IC27-146",
+    "setCode": "IC27",
+    "number": 146,
+    "name": "Boba Fett",
+    "subtitle": "Compensated If He Dies",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010146_EN_Boba_Fett_46b13c0d4a.png"
+  },
+  {
+    "id": "IC27-147",
+    "setCode": "IC27",
+    "number": 147,
+    "name": "Asajj Ventress",
+    "subtitle": "Death From Above",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010147_EN_Asajj_Ventress_1d32f36c50.png"
+  },
+  {
+    "id": "IC27-148",
+    "setCode": "IC27",
+    "number": 148,
+    "name": "Count Dooku",
+    "subtitle": "Silver-Tongued",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010148_EN_Count_Dooku_1b2a19b7ce.png"
+  },
+  {
+    "id": "IC27-149",
+    "setCode": "IC27",
+    "number": 149,
+    "name": "The Invisible Hand",
+    "subtitle": "Confederate Might",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010149_EN_The_Invisible_Hand_de3dc55103.png"
+  },
+  {
+    "id": "IC27-151",
+    "setCode": "IC27",
+    "number": 151,
+    "name": "R2-D2",
+    "subtitle": "The First Protagonist",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010151_EN_R2_D2_e5380d412a.png"
+  },
+  {
+    "id": "IC27-155",
+    "setCode": "IC27",
+    "number": 155,
+    "name": "Han Solo",
+    "subtitle": "Gamblin' Man",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010155_EN_Han_Solo_90e3b86a83.png"
+  },
+  {
+    "id": "IC27-157",
+    "setCode": "IC27",
+    "number": 157,
+    "name": "The Mandalorian",
+    "subtitle": "From the Shadows",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010157_EN_The_Mandalorian_2d6c0dcf6e.png"
+  },
+  {
+    "id": "IC27-158",
+    "setCode": "IC27",
+    "number": 158,
+    "name": "Millennium Falcon",
+    "subtitle": "Ya-Hoo!",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010158_EN_Millennium_Falcon_6fcd20393c.png"
+  },
+  {
+    "id": "IC27-159",
+    "setCode": "IC27",
+    "number": 159,
+    "name": "Princess Leia",
+    "subtitle": "Calculated Distraction",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010159_EN_Princess_Leia_d2a8d3b6fb.png"
+  },
+  {
+    "id": "IC27-160",
+    "setCode": "IC27",
+    "number": 160,
+    "name": "Tantive IV",
+    "subtitle": "For Alderaan",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010160_EN_Tantive_IV_103a0c5899.png"
+  },
+  {
+    "id": "IC27-163",
+    "setCode": "IC27",
+    "number": 163,
+    "name": "Bo-Katan Kryze",
+    "subtitle": "Right Place, Right Time",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010163_EN_Bo_Katan_Kryze_01e57e7497.png"
+  },
+  {
+    "id": "IC27-165",
+    "setCode": "IC27",
+    "number": 165,
+    "name": "Luke Skywalker",
+    "subtitle": "Overplaying His Hand",
+    "rarity": "Legendary",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010165_EN_Luke_Skywalker_4b9533209e.png"
+  },
+  {
+    "id": "IC27-167",
+    "setCode": "IC27",
+    "number": 167,
+    "name": "Lando Calrissian",
+    "subtitle": "Check This Out",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010167_EN_Lando_Calrissian_24ac0f703c.png"
+  },
+  {
+    "id": "IC27-179",
+    "setCode": "IC27",
+    "number": 179,
+    "name": "Morgan Elsbeth",
+    "subtitle": "Tales Based on Truths",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010179_EN_Morgan_Elsbeth_a107630947.png"
+  },
+  {
+    "id": "IC27-187",
+    "setCode": "IC27",
+    "number": 187,
+    "name": "Jar Jar Binks",
+    "subtitle": "Bumbling Representative",
+    "rarity": "Rare",
+    "type": "Unit",
+    "imageUrl": "https://cdn.starwarsunlimited.com//card_IC_27010187_EN_Jar_Jar_Binks_52decbda9c.png"
+  }
+]

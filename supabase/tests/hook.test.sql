@@ -2,6 +2,11 @@
 begin;
 select plan(13);
 
+-- Isolate from seeded catalog and local dev data (rolled back with the transaction).
+delete from public.stock;
+delete from public.team_members;
+delete from public.cards;
+
 insert into public.team_members (email, display_name) values
   ('alice@team.test', 'Alice'),
   ('bea@team.test', 'Bea');

@@ -2,6 +2,11 @@
 begin;
 select plan(27);
 
+-- Isolate from seeded catalog and local dev data (rolled back with the transaction).
+delete from public.stock;
+delete from public.team_members;
+delete from public.cards;
+
 insert into public.cards (id, set_code, card_number, name, subtitle, rarity, card_type, image_url) values
   ('LAW-1', 'LAW', 1, 'Test Card One', null, 'Rare', 'Unit', 'https://example.test/1.png'),
   ('LAW-2', 'LAW', 2, 'Test Card Two', 'Sub', 'Legendary', 'Leader', 'https://example.test/2.png');

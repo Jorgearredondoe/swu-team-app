@@ -11,7 +11,8 @@
     "test:db": "supabase test db",
     "db:start": "supabase start",
     "db:reset": "supabase db reset",
-    "db:dev-user": "docker exec -i supabase_db_swu-team-app psql -U postgres -v ON_ERROR_STOP=1 -f - < supabase/local/dev-user.sql"
+    "db:dev-user": "docker exec -i supabase_db_swu-team-app psql -U postgres -v ON_ERROR_STOP=1 -f - < supabase/local/dev-user.sql",
+    "seed:cards": "node scripts/seed-cards.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.119.0"
