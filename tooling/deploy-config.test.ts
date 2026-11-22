@@ -57,6 +57,18 @@ describe('local supabase config', () => {
 });
 
 describe('deploy checklist', () => {
+  it('disables the Email provider FIRST, right after creating the project', () => {
+    const doc = read('docs/DEPLOY.md');
+    const supabase = doc.slice(doc.indexOf('## Supabase (hosted project)'));
+    const items = supabase.split('\n').filter((line) => line.startsWith('- [ ] '));
+    expect(items[0]).toMatch(/Create the Supabase project/);
+    expect(items[1]).toMatch(/Disable the Email provider/);
+    const email = doc.search(/- \[ \] .*Disable the Email provider/);
+    for (const later of [/- \[ \] .*db push/, /- \[ \] .*members\.local\.sql/, /- \[ \] .*Enable the before-user-created hook/, /- \[ \] .*Enable the Google provider/]) {
+      expect(doc.search(later)).toBeGreaterThan(email);
+    }
+  });
+
   it('enables the signup hook BEFORE enabling the Google provider', () => {
     const doc = read('docs/DEPLOY.md');
     const hook = doc.search(/- \[ \] .*Enable the before-user-created hook/);

@@ -11,12 +11,14 @@ the hosted project; configure production auth in the dashboard as described belo
 
 ## Supabase (hosted project)
 
-Order matters: the allowlist hook must be active before any sign-in method is.
+Order matters: no sign-in method may be open before the allowlist hook is active. A new
+hosted project starts with the Email provider ENABLED, so disable it before anything else.
 
+- [ ] Create the Supabase project in the dashboard.
+- [ ] Disable the Email provider (Authentication > Providers > Email) so only Google sign-in exists. Do this FIRST: until it is off, anyone can sign up with email/password while the allowlist hook is not yet enabled. The local config enables email/password for a dev-only test user; it must never reach production.
 - [ ] Run `npx supabase link` and `npx supabase db push --include-seed` (applies the migration and the card catalog seed only).
 - [ ] Run `supabase/seed/members.local.sql` manually in the SQL editor with the real member emails. This file is gitignored and must never be committed.
 - [ ] Enable the before-user-created hook (Authentication > Hooks) pointing to `public.hook_before_user_created`. It rejects every sign-up that is not Google with an allowlisted email. Without it RLS still protects the data, but non-members could create accounts.
-- [ ] Disable the Email provider (Authentication > Providers > Email) so only Google sign-in exists. The local config enables email/password for a dev-only test user; it must never reach production.
 - [ ] Enable the Google provider with your OAuth client id and secret (only after the hook is enabled).
 - [ ] Set the Site URL to the deployed app URL and add it (plus `http://localhost:5173/**` if desired) to the redirect URLs.
 
