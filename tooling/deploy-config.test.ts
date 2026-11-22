@@ -28,6 +28,12 @@ function walk(dir: string, out: string[] = []): string[] {
 describe('local supabase config', () => {
   const config = read('supabase/config.toml');
 
+  it('is marked LOCAL ONLY at the top and warns never to config push it', () => {
+    const head = config.split('\n').slice(0, 8).join('\n');
+    expect(head).toMatch(/LOCAL ONLY/);
+    expect(head).toMatch(/never run `supabase config push`/i);
+  });
+
   it('enables the strict before-user-created allowlist hook', () => {
     const hook = tomlSection(config, '[auth.hook.before_user_created]');
     expect(hook).toContain('enabled = true');
@@ -51,6 +57,19 @@ describe('local supabase config', () => {
 });
 
 describe('deploy checklist', () => {
+  it('enables the signup hook BEFORE enabling the Google provider', () => {
+    const doc = read('docs/DEPLOY.md');
+    const hook = doc.search(/- \[ \] .*Enable the before-user-created hook/);
+    const google = doc.search(/- \[ \] .*Enable the Google provider/);
+    expect(hook).toBeGreaterThan(-1);
+    expect(google).toBeGreaterThan(hook);
+  });
+
+  it('forbids pushing the local config and explains scheduled-workflow suspension', () => {
+    const doc = read('docs/DEPLOY.md');
+    expect(doc).toMatch(/never run `supabase config push`/i);
+    expect(doc).toMatch(/60 days/);
+  });
   it('documents disabling email/password auth in production', () => {
     expect(existsSync(join(root, 'docs/DEPLOY.md'))).toBe(true);
     const doc = read('docs/DEPLOY.md');
