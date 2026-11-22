@@ -97,3 +97,18 @@ describe('repository hygiene (public repo)', () => {
     expect(example).not.toMatch(/^[A-Z_]*SERVICE[A-Z_]*=/m);
   });
 });
+
+describe('client auth surface', () => {
+  it('keeps the email/password form behind the Vite dev flag so it is stripped from production builds', () => {
+    const page = read('src/pages/LoginPage.svelte');
+    expect(page).toContain('{#if import.meta.env.DEV && methods.emailPassword}');
+  });
+
+  it('never references a service_role key in client source', () => {
+    const srcFiles = walk(join(root, 'src')).filter((f) => !f.endsWith('.test.ts'));
+    expect(srcFiles.length).toBeGreaterThan(5);
+    for (const file of srcFiles) {
+      expect(readFileSync(file, 'utf8').toLowerCase(), relative(root, file)).not.toContain('service_role');
+    }
+  });
+});
