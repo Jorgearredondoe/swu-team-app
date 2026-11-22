@@ -91,4 +91,26 @@ describe('stock store', () => {
     expect(store.loaded).toBe(false);
     expect(store.error).toBe('Could not load your stock.');
   });
+
+  it('does not roll back a card that has a newer pending value when an older batch fails', async () => {
+    const results: { resolve: () => void; reject: (e: unknown) => void }[] = [];
+    const save = vi.fn(() => new Promise<void>((resolve, reject) => results.push({ resolve, reject })));
+    const store = createStockStore({ fetchStock: async () => ({ 'LAW-1': 1, 'ASH-7': 1 }), save, delayMs: 600 });
+    await store.load();
+    store.set('LAW-1', 3);
+    store.set('ASH-7', 4);
+    await vi.advanceTimersByTimeAsync(600); // batch 1 in flight: LAW-1=3, ASH-7=4
+    store.set('LAW-1', 5); // newer pending value for LAW-1 only
+    results[0].reject(new Error('timeout'));
+    await vi.advanceTimersByTimeAsync(0);
+    expect(store.qty('LAW-1')).toBe(5); // kept: the newer value is still going to be saved
+    expect(store.qty('ASH-7')).toBe(1); // rolled back: nothing newer pending
+    expect(store.error).toBe('Could not save your changes. They were reverted.');
+    await vi.advanceTimersByTimeAsync(600);
+    expect(save).toHaveBeenCalledTimes(2);
+    expect(save.mock.calls[1][0]).toEqual([{ cardId: 'LAW-1', qty: 5 }]);
+    results[1].resolve();
+    await vi.advanceTimersByTimeAsync(0);
+    expect(store.qty('LAW-1')).toBe(5);
+  });
 });

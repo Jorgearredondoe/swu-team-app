@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createWriteQueue } from './writeQueue.ts';
+import type { StockChange } from '../types.ts';
 
 beforeEach(() => vi.useFakeTimers());
 afterEach(() => vi.useRealTimers());
@@ -80,5 +81,61 @@ describe('createWriteQueue', () => {
     queue.enqueue('LAW-1', 1);
     await vi.advanceTimersByTimeAsync(50);
     expect(flush).toHaveBeenCalledTimes(1);
+  });
+
+  describe('single in-flight flush', () => {
+    function deferredFlush() {
+      const calls: { changes: StockChange[]; resolve: () => void; reject: (e: unknown) => void }[] = [];
+      const flush = vi.fn(
+        (changes: StockChange[]) =>
+          new Promise<void>((resolve, reject) => calls.push({ changes, resolve, reject })),
+      );
+      return { flush, calls };
+    }
+
+    it('never starts a batch while another is in flight, and sends later batches in order', async () => {
+      const { flush, calls } = deferredFlush();
+      const queue = createWriteQueue({ flush, onError: vi.fn() });
+      queue.enqueue('LAW-1', 1);
+      await vi.advanceTimersByTimeAsync(600);
+      queue.enqueue('LAW-1', 2);
+      await vi.advanceTimersByTimeAsync(600);
+      void queue.flushNow();
+      await vi.advanceTimersByTimeAsync(0);
+      expect(flush).toHaveBeenCalledTimes(1);
+      calls[0].resolve();
+      await vi.advanceTimersByTimeAsync(0);
+      expect(flush).toHaveBeenCalledTimes(2);
+      expect(calls.map((c) => c.changes)).toEqual([[{ cardId: 'LAW-1', qty: 1 }], [{ cardId: 'LAW-1', qty: 2 }]]);
+    });
+
+    it('flushNow resolves only after the in-flight and the pending batch are done', async () => {
+      const { flush, calls } = deferredFlush();
+      const queue = createWriteQueue({ flush, onError: vi.fn() });
+      queue.enqueue('LAW-1', 1);
+      await vi.advanceTimersByTimeAsync(600);
+      queue.enqueue('ASH-7', 1);
+      let done = false;
+      const flushed = queue.flushNow().then(() => (done = true));
+      calls[0].resolve();
+      await vi.advanceTimersByTimeAsync(0);
+      expect(done).toBe(false);
+      calls[1].resolve();
+      await flushed;
+      expect(done).toBe(true);
+    });
+
+    it('reports whether a card has a newer pending value', async () => {
+      const { flush, calls } = deferredFlush();
+      const queue = createWriteQueue({ flush, onError: vi.fn() });
+      queue.enqueue('LAW-1', 1);
+      expect(queue.isPending('LAW-1')).toBe(true);
+      await vi.advanceTimersByTimeAsync(600);
+      expect(queue.isPending('LAW-1')).toBe(false);
+      queue.enqueue('LAW-1', 2);
+      expect(queue.isPending('LAW-1')).toBe(true);
+      expect(queue.isPending('ASH-7')).toBe(false);
+      calls[0].resolve();
+    });
   });
 });

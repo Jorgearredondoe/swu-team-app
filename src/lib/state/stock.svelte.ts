@@ -26,7 +26,10 @@ export function createStockStore({ fetchStock, save, delayMs }: StockStoreDeps) 
       for (const c of changes) saved[c.cardId] = c.qty;
     },
     onError: (changes) => {
-      for (const c of changes) quantities[c.cardId] = saved[c.cardId] ?? 0;
+      // A card edited again after this batch left keeps its newer value: it is still queued.
+      for (const c of changes) {
+        if (!queue.isPending(c.cardId)) quantities[c.cardId] = saved[c.cardId] ?? 0;
+      }
       error = SAVE_ERROR;
     },
   });
