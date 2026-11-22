@@ -1,6 +1,6 @@
 -- before-user-created allowlist hook: deny by default.
 begin;
-select plan(26);
+select plan(31);
 
 -- Isolate from seeded catalog and local dev data (rolled back with the transaction).
 delete from public.stock;
@@ -38,12 +38,12 @@ select is(
   0, 'public, anon and authenticated cannot execute hook');
 
 -- Link trigger: only a CONFIRMED email links the auth user to its allowlist row
-insert into auth.users (id, email, aud, role, email_confirmed_at) values
-  ('00000000-0000-0000-0000-00000000000a', 'Alice@Team.Test', 'authenticated', 'authenticated', now());
+insert into auth.users (id, email, aud, role, email_confirmed_at, raw_app_meta_data) values
+  ('00000000-0000-0000-0000-00000000000a', 'Alice@Team.Test', 'authenticated', 'authenticated', now(), '{"provider":"google"}');
 select is((select user_id::text from public.team_members where email = 'alice@team.test'), '00000000-0000-0000-0000-00000000000a', 'confirmed auth user linked to team_members by lowercased email');
 
-insert into auth.users (id, email, aud, role) values
-  ('00000000-0000-0000-0000-00000000000b', 'bea@team.test', 'authenticated', 'authenticated');
+insert into auth.users (id, email, aud, role, raw_app_meta_data) values
+  ('00000000-0000-0000-0000-00000000000b', 'bea@team.test', 'authenticated', 'authenticated', '{"provider":"google"}');
 select is((select user_id from public.team_members where email = 'bea@team.test'), null, 'unconfirmed email is not linked');
 
 update auth.users set email_confirmed_at = now() where id = '00000000-0000-0000-0000-00000000000b';
@@ -52,23 +52,41 @@ select is(has_table_privilege('supabase_auth_admin', 'public.team_members', 'sel
 
 -- Reverse link: an auth user that already exists is linked when the allowlist row
 -- is added (or its email is changed) later, but only if that email is confirmed.
-insert into auth.users (id, email, aud, role, email_confirmed_at) values
-  ('00000000-0000-0000-0000-00000000000c', 'Carol@Team.Test', 'authenticated', 'authenticated', now());
-insert into auth.users (id, email, aud, role) values
-  ('00000000-0000-0000-0000-00000000000d', 'dan@team.test', 'authenticated', 'authenticated');
+insert into auth.users (id, email, aud, role, email_confirmed_at, raw_app_meta_data) values
+  ('00000000-0000-0000-0000-00000000000c', 'Carol@Team.Test', 'authenticated', 'authenticated', now(), '{"provider":"google"}');
+insert into auth.users (id, email, aud, role, raw_app_meta_data) values
+  ('00000000-0000-0000-0000-00000000000d', 'dan@team.test', 'authenticated', 'authenticated', '{"provider":"google"}');
 insert into public.team_members (email, display_name) values ('carol@team.test', 'Carol');
 select is((select user_id::text from public.team_members where email = 'carol@team.test'), '00000000-0000-0000-0000-00000000000c', 'existing confirmed auth user linked when allowlist row is inserted later');
 insert into public.team_members (email, display_name) values ('dan@team.test', 'Dan');
 select is((select user_id from public.team_members where email = 'dan@team.test'), null, 'existing unconfirmed auth user is not linked on allowlist insert');
 
-insert into auth.users (id, email, aud, role, email_confirmed_at) values
-  ('00000000-0000-0000-0000-00000000000e', 'eve@team.test', 'authenticated', 'authenticated', now());
+insert into auth.users (id, email, aud, role, email_confirmed_at, raw_app_meta_data) values
+  ('00000000-0000-0000-0000-00000000000e', 'eve@team.test', 'authenticated', 'authenticated', now(), '{"provider":"google"}');
 insert into public.team_members (email, display_name) values ('eve-typo@team.test', 'Eve');
 select is((select user_id from public.team_members where email = 'eve-typo@team.test'), null, 'allowlist row with no matching auth user stays unlinked');
 update public.team_members set email = 'eve@team.test' where email = 'eve-typo@team.test';
 select is((select user_id::text from public.team_members where email = 'eve@team.test'), '00000000-0000-0000-0000-00000000000e', 'correcting the allowlist email links the existing confirmed user');
 update public.team_members set display_name = 'Eve B' where email = 'eve@team.test';
 select is((select user_id::text from public.team_members where email = 'eve@team.test'), '00000000-0000-0000-0000-00000000000e', 'unrelated updates keep the link');
+
+-- Provider restriction: only Google-provider users are ever linked, in either direction.
+insert into auth.users (id, email, aud, role, email_confirmed_at, raw_app_meta_data) values
+  ('00000000-0000-0000-0000-00000000000f', 'frank@team.test', 'authenticated', 'authenticated', now(), '{"provider":"email"}'),
+  ('00000000-0000-0000-0000-000000000010', 'gina@team.test', 'authenticated', 'authenticated', now(), '{"provider":"google"}'),
+  ('00000000-0000-0000-0000-000000000011', 'hugo@team.test', 'authenticated', 'authenticated', null, '{"provider":"email"}'),
+  ('00000000-0000-0000-0000-000000000012', 'ivan@team.test', 'authenticated', 'authenticated', now(), null);
+insert into public.team_members (email, display_name) values
+  ('frank@team.test', 'Frank'), ('gina@team.test', 'Gina'), ('hugo@team.test', 'Hugo'), ('ivan@team.test', 'Ivan');
+select is((select user_id from public.team_members where email = 'frank@team.test'), null, 'existing confirmed email-provider user is NOT linked on allowlist insert');
+select is((select user_id::text from public.team_members where email = 'gina@team.test'), '00000000-0000-0000-0000-000000000010', 'existing confirmed google user is linked on allowlist insert');
+select is((select user_id from public.team_members where email = 'ivan@team.test'), null, 'existing user without provider metadata is NOT linked on allowlist insert');
+update auth.users set email_confirmed_at = now() where id = '00000000-0000-0000-0000-000000000011';
+select is((select user_id from public.team_members where email = 'hugo@team.test'), null, 'confirming an email-provider user does NOT link it (signup trigger)');
+insert into public.team_members (email, display_name) values ('judy@team.test', 'Judy');
+insert into auth.users (id, email, aud, role, email_confirmed_at, raw_app_meta_data) values
+  ('00000000-0000-0000-0000-000000000013', 'judy@team.test', 'authenticated', 'authenticated', now(), '{"provider":"email"}');
+select is((select user_id from public.team_members where email = 'judy@team.test'), null, 'confirmed email-provider signup is NOT linked (signup trigger)');
 
 select ok((select prosecdef and 'search_path=""' = any(proconfig) from pg_proc where oid = 'public.link_team_member_from_allowlist()'::regprocedure), 'allowlist link function is SECURITY DEFINER with empty search_path');
 select is(

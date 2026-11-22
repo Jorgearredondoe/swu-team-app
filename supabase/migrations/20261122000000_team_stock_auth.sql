@@ -16,6 +16,9 @@ alter default privileges for role postgres in schema public
 -- per-schema revoke cannot remove: only a global (no `in schema`) revoke does. Without
 -- it every future postgres-owned function would be callable by anon/authenticated.
 -- Functions that must be callable are granted explicitly below (e.g. keepalive to anon).
+-- CONSEQUENCE: every function postgres creates from now on, in ANY schema (including
+-- extensions installed later), is callable by nobody but its owner until an explicit
+-- `grant execute` is given to each role that calls it.
 alter default privileges for role postgres
   revoke execute on functions from public;
 
@@ -66,7 +69,9 @@ as $$
 $$;
 
 -- Links an auth user to its allowlist row by (lowercased) email, but only once the
--- email is confirmed. GoTrue may confirm in the INSERT or in a later UPDATE.
+-- email is confirmed and only for Google-provider users (the sole sign-in path the
+-- before-user-created hook admits). Local email/password dev users are linked explicitly
+-- by supabase/local/dev-user.sql. GoTrue may confirm in the INSERT or in a later UPDATE.
 create function public.link_team_member()
 returns trigger
 language plpgsql
@@ -74,7 +79,8 @@ security definer
 set search_path = ''
 as $$
 begin
-  if new.email_confirmed_at is null then
+  if new.email_confirmed_at is null
+     or new.raw_app_meta_data ->> 'provider' is distinct from 'google' then
     return new;
   end if;
   update public.team_members
@@ -120,6 +126,7 @@ begin
       from auth.users u
      where lower(u.email) = lower(new.email)
        and u.email_confirmed_at is not null
+       and u.raw_app_meta_data ->> 'provider' = 'google'
        and not exists (
          select 1 from public.team_members m
           where m.user_id = u.id and m.email is distinct from v_self_email
