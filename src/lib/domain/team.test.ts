@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { sampleCards } from './fixtures.ts';
-import { aggregateTeam } from './team.ts';
+import { aggregateTeam, summarizeMembers } from './team.ts';
 
 const rows = [
   { cardId: 'LAW-1', userId: 'u-a', displayName: 'Alice', qty: 2 },
@@ -35,5 +35,24 @@ describe('aggregateTeam', () => {
   it('ignores stock rows for cards missing from the catalog', () => {
     const totals = aggregateTeam([{ cardId: 'XXX-9', userId: 'u-a', displayName: 'Alice', qty: 4 }], sampleCards);
     expect(totals.map((t) => t.cardId)).not.toContain('XXX-9');
+  });
+});
+
+describe('summarizeMembers', () => {
+  it('counts copies and distinct cards per member, ignoring qty 0 rows', () => {
+    expect(summarizeMembers(rows)).toEqual([
+      { displayName: 'Alice', copies: 2, distinctCards: 1 },
+      { displayName: 'Bea', copies: 4, distinctCards: 2 },
+    ]);
+  });
+
+  it('lists a member with only zero rows as 0 copies', () => {
+    expect(summarizeMembers([{ cardId: 'ASH-7', userId: 'u-c', displayName: 'Cy', qty: 0 }])).toEqual([
+      { displayName: 'Cy', copies: 0, distinctCards: 0 },
+    ]);
+  });
+
+  it('returns an empty list when there is no stock at all', () => {
+    expect(summarizeMembers([])).toEqual([]);
   });
 });

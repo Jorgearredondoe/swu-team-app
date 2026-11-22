@@ -13,3 +13,19 @@ export function aggregateTeam(rows: readonly TeamRow[], cards: readonly Card[]):
   }
   return [...totals.values()];
 }
+
+export type MemberSummary = { displayName: string; copies: number; distinctCards: number };
+
+/** Per-member totals, sorted by name. */
+export function summarizeMembers(rows: readonly TeamRow[]): MemberSummary[] {
+  const byName = new Map<string, MemberSummary>();
+  for (const row of rows) {
+    const entry = byName.get(row.displayName) ?? { displayName: row.displayName, copies: 0, distinctCards: 0 };
+    if (row.qty > 0) {
+      entry.copies += row.qty;
+      entry.distinctCards += 1;
+    }
+    byName.set(row.displayName, entry);
+  }
+  return [...byName.values()].sort((a, b) => a.displayName.localeCompare(b.displayName));
+}
