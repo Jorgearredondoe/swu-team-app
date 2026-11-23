@@ -1,0 +1,410 @@
+{
+  "data": [
+    {
+      "id": 46057,
+      "attributes": {
+        "title": "Saw Gerrera",
+        "subtitle": "Bring Down the Empire",
+        "cardNumber": 1,
+        "cardCount": 264,
+        "serialCode": "07010001",
+        "artFront": {
+          "data": {
+            "attributes": {
+              "url": "https://cdn.starwarsunlimited.com//07010001_EN_Saw_Gerrera_Leader_0c35c7027d.png",
+              "formats": {
+                "card": {
+                  "url": "https://cdn.starwarsunlimited.com//card_07010001_EN_Saw_Gerrera_Leader_0c35c7027d.png"
+                }
+              }
+            }
+          }
+        },
+        "type": {
+          "data": {
+            "attributes": {
+              "name": "Leader"
+            }
+          }
+        },
+        "rarity": {
+          "data": {
+            "attributes": {
+              "name": "Rare"
+            }
+          }
+        },
+        "expansion": {
+          "data": {
+            "attributes": {
+              "code": "LAW",
+              "name": "A Lawless Time"
+            }
+          }
+        },
+        "variantTypes": {
+          "data": [
+            {
+              "attributes": {
+                "name": "Standard"
+              }
+            }
+          ]
+        },
+        "variantOf": {
+          "data": null
+        }
+      }
+    },
+    {
+      "id": 46212,
+      "attributes": {
+        "title": "Cad Bane",
+        "subtitle": "Now It's My Turn",
+        "cardNumber": 32,
+        "cardCount": 264,
+        "serialCode": "07010032",
+        "artFront": {
+          "data": {
+            "attributes": {
+              "url": "https://cdn.starwarsunlimited.com//07010032_EN_Cad_Bane_7729561e38.png",
+              "formats": {
+                "card": {
+                  "url": "https://cdn.starwarsunlimited.com//card_07010032_EN_Cad_Bane_7729561e38.png"
+                }
+              }
+            }
+          }
+        },
+        "type": {
+          "data": {
+            "attributes": {
+              "name": "Unit"
+            }
+          }
+        },
+        "rarity": {
+          "data": {
+            "attributes": {
+              "name": "Legendary"
+            }
+          }
+        },
+        "expansion": {
+          "data": {
+            "attributes": {
+              "code": "LAW",
+              "name": "A Lawless Time"
+            }
+          }
+        },
+        "variantTypes": {
+          "data": [
+            {
+              "attributes": {
+                "name": "Standard"
+              }
+            }
+          ]
+        },
+        "variantOf": {
+          "data": null
+        }
+      }
+    },
+    {
+      "id": 46147,
+      "attributes": {
+        "title": "Alliance Outpost",
+        "subtitle": "",
+        "cardNumber": 19,
+        "cardCount": 264,
+        "serialCode": "07010019",
+        "artFront": {
+          "data": {
+            "attributes": {
+              "url": "https://cdn.starwarsunlimited.com//07010019_EN_Alliance_Outpost_Base_c7a5172a6f.png",
+              "formats": {
+                "card": {
+                  "url": "https://cdn.starwarsunlimited.com//card_07010019_EN_Alliance_Outpost_Base_c7a5172a6f.png"
+                }
+              }
+            }
+          }
+        },
+        "type": {
+          "data": {
+            "attributes": {
+              "name": "Base"
+            }
+          }
+        },
+        "rarity": {
+          "data": {
+            "attributes": {
+              "name": "Rare"
+            }
+          }
+        },
+        "expansion": {
+          "data": {
+            "attributes": {
+              "code": "LAW",
+              "name": "A Lawless Time"
+            }
+          }
+        },
+        "variantTypes": {
+          "data": [
+            {
+              "attributes": {
+                "name": "Standard"
+              }
+            }
+          ]
+        },
+        "variantOf": {
+          "data": null
+        }
+      }
+    },
+    {
+      "id": 46477,
+      "attributes": {
+        "title": "You Hold This",
+        "subtitle": "",
+        "cardNumber": 85,
+        "cardCount": 264,
+        "serialCode": "07010085",
+        "artFront": {
+          "data": {
+            "attributes": {
+              "url": "https://cdn.starwarsunlimited.com//07010085_EN_You_Hold_This_5994efb8f0.png",
+              "formats": {
+                "card": {
+                  "url": "https://cdn.starwarsunlimited.com//card_07010085_EN_You_Hold_This_5994efb8f0.png"
+                }
+              }
+            }
+          }
+        },
+        "type": {
+          "data": {
+            "attributes": {
+              "name": "Event"
+            }
+          }
+        },
+        "rarity": {
+          "data": {
+            "attributes": {
+              "name": "Rare"
+            }
+          }
+        },
+        "expansion": {
+          "data": {
+            "attributes": {
+              "code": "LAW",
+              "name": "A Lawless Time"
+            }
+          }
+        },
+        "variantTypes": {
+          "data": [
+            {
+              "attributes": {
+                "name": "Standard"
+              }
+            }
+          ]
+        },
+        "variantOf": {
+          "data": null
+        }
+      }
+    },
+    {
+      "id": 47392,
+      "attributes": {
+        "title": "Saw Gerrera",
+        "subtitle": "Bring Down the Empire",
+        "cardNumber": 265,
+        "cardCount": 0,
+        "serialCode": "07020265",
+        "artFront": {
+          "data": {
+            "attributes": {
+              "url": "https://cdn.starwarsunlimited.com//07020265_EN_Saw_Gerrera_Leader_5366717fcd.png",
+              "formats": {
+                "card": {
+                  "url": "https://cdn.starwarsunlimited.com//card_07020265_EN_Saw_Gerrera_Leader_5366717fcd.png"
+                }
+              }
+            }
+          }
+        },
+        "type": {
+          "data": {
+            "attributes": {
+              "name": "Leader"
+            }
+          }
+        },
+        "rarity": {
+          "data": {
+            "attributes": {
+              "name": "Rare"
+            }
+          }
+        },
+        "expansion": {
+          "data": {
+            "attributes": {
+              "code": "LAW",
+              "name": "A Lawless Time"
+            }
+          }
+        },
+        "variantTypes": {
+          "data": [
+            {
+              "attributes": {
+                "name": "Hyperspace"
+              }
+            }
+          ]
+        },
+        "variantOf": {
+          "data": {
+            "id": 46057
+          }
+        }
+      }
+    },
+    {
+      "id": 47537,
+      "attributes": {
+        "title": "Saw Gerrera",
+        "subtitle": "Bring Down the Empire",
+        "cardNumber": 767,
+        "cardCount": 0,
+        "serialCode": "07030767",
+        "artFront": {
+          "data": {
+            "attributes": {
+              "url": "https://cdn.starwarsunlimited.com//07030767_EN_Saw_Gerrera_Leader_17f837ce8e.png",
+              "formats": {
+                "card": {
+                  "url": "https://cdn.starwarsunlimited.com//card_07030767_EN_Saw_Gerrera_Leader_17f837ce8e.png"
+                }
+              }
+            }
+          }
+        },
+        "type": {
+          "data": {
+            "attributes": {
+              "name": "Leader"
+            }
+          }
+        },
+        "rarity": {
+          "data": {
+            "attributes": {
+              "name": "Rare"
+            }
+          }
+        },
+        "expansion": {
+          "data": {
+            "attributes": {
+              "code": "LAW",
+              "name": "A Lawless Time"
+            }
+          }
+        },
+        "variantTypes": {
+          "data": [
+            {
+              "attributes": {
+                "name": "Showcase"
+              }
+            }
+          ]
+        },
+        "variantOf": {
+          "data": {
+            "id": 46057
+          }
+        }
+      }
+    },
+    {
+      "id": 47652,
+      "attributes": {
+        "title": "Cad Bane",
+        "subtitle": "Now It's My Turn",
+        "cardNumber": 296,
+        "cardCount": 0,
+        "serialCode": "07020296",
+        "artFront": {
+          "data": {
+            "attributes": {
+              "url": "https://cdn.starwarsunlimited.com//07020296_EN_Cad_Bane_43f7b68595.png",
+              "formats": {
+                "card": {
+                  "url": "https://cdn.starwarsunlimited.com//card_07020296_EN_Cad_Bane_43f7b68595.png"
+                }
+              }
+            }
+          }
+        },
+        "type": {
+          "data": {
+            "attributes": {
+              "name": "Unit"
+            }
+          }
+        },
+        "rarity": {
+          "data": {
+            "attributes": {
+              "name": "Legendary"
+            }
+          }
+        },
+        "expansion": {
+          "data": {
+            "attributes": {
+              "code": "LAW",
+              "name": "A Lawless Time"
+            }
+          }
+        },
+        "variantTypes": {
+          "data": [
+            {
+              "attributes": {
+                "name": "Hyperspace"
+              }
+            }
+          ]
+        },
+        "variantOf": {
+          "data": {
+            "id": 46212
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 250,
+      "pageCount": 1,
+      "total": 7
+    }
+  }
+}
